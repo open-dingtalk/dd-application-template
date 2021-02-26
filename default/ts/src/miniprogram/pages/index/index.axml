@@ -1,0 +1,20 @@
+<view class="page-index" a:if="{{sdkReady}}">
+  <project-select-view
+    componentName="{{componentsData['project-select-view'].componentName}}"
+    componentProps="{{componentsData['project-select-view'].props}}"
+    config="{{config}}"
+  >
+  </project-select-view>
+  <statistical-indicator-view
+    componentName="{{componentsData['statistical-indicator-view'].componentName}}"
+    componentProps="{{componentsData['statistical-indicator-view'].props}}"
+    config="{{config}}"
+  >
+  </statistical-indicator-view>
+  <component-template
+    componentName="{{componentsData['component-template'].componentName}}"
+    componentProps="{{componentsData['component-template'].props}}"
+    config="{{config}}"
+  >
+  </component-template>
+</view>

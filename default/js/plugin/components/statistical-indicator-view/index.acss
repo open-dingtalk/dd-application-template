@@ -1,0 +1,31 @@
+.statistical-indicator-view {
+  width: 100%;
+  height: 100%;
+  /* 最小高度占位，防止抖动 */
+  min-height: 126rpx;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48rpx;
+}
+.statistical-indicator-view .item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48rpx;
+}
+
+.statistical-indicator-view .item .y {
+  color: #1890ff;
+  font-size: 40rpx;
+}
+
+.statistical-indicator-view .item .x {
+  color: #b4b4b4;
+  font-size: 28rpx;
+}

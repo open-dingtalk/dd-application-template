@@ -1,0 +1,35 @@
+{
+  "name": "dd-application-template",
+  "version": "0.1.0",
+  "description": "DingTalk application template",
+  "main": "index.js",
+  "keywords": [
+    "DingTalk",
+    "application",
+    "template"
+  ],
+  "author": "lou1swu",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "homepage": "https://github.com/open-dingtalk/dd-application-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-dingtalk/dd-application-template.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableScopeLowerCase": false,
+      "disableSubjectLowerCase": false,
+      "maxHeaderWidth": 100,
+      "maxLineWidth": 100,
+      "defaultType": "",
+      "defaultScope": "",
+      "defaultSubject": "",
+      "defaultBody": "",
+      "defaultIssues": ""
+    }
+  }
+}

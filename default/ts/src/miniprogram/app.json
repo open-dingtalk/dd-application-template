@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "plugins": {
+    "myPlugin": {
+      "version": "dev",
+      "provider": "{{currentPluginId}}"
+    }
+  },
+  "window": {
+    "defaultTitle": "定制工作台"
+  },
+  "useDynamicPlugins": true
+}

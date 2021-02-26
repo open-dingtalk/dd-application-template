@@ -1,0 +1,519 @@
+{
+    "eslint.enable": true,
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "prettier.enable": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "editor.tabSize": 2,
+    "json.format.enable": true,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/src/plugin/components/**/config.json"
+            ],
+            "schema": {
+                "type": "object",
+                "required": ["pluginComponentName","name","icon"],
+                "properties": {
+                    "pluginComponentName": {
+                        "type": "string",
+                        "description": "组件名称（展示在插件管理页）"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "组件名称（展示在设计器）"
+                    },
+                    "icon": {
+                        "type": "string",
+                        "pattern": "https://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]",
+                        "description": "组件图标（展示在设计器左侧自定义组件列表中的小图标）"
+                    },
+                    "previewUrl": {
+                        "type": "string",
+                        "pattern": "https://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]",
+                        "description": "组件预览图（展示在设计器模拟器区的预览图）"
+                    },
+                    "previewHeight": {
+                        "type": "number",
+                        "description": "组件预览图高度（展示在设计器模拟器区的预览图的高度）"
+                    },
+                    "setters": {
+                        "type": "array",
+                        "$ref": "#/definitions/setters",
+                        "additionalProperties": false,
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "Input",
+                                            "description": "InputSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "Radio",
+                                            "description": "RadioSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "options": [
+                                                        {
+                                                            "value": "",
+                                                            "title": ""
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                                "options": {
+                                                    "$ref": "#/definitions/options",
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "InputNumber",
+                                            "description": "InputNumberSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "min": 0,
+                                                    "max": 1,
+                                                    "step": 1
+                                                }
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                                "min": {
+                                                    "$ref": "#/definitions/min",
+                                                },
+                                                "max": {
+                                                    "$ref": "#/definitions/max",
+                                                },
+                                                "step": {
+                                                    "type": ["string", "number"],
+                                                    "description": "步长"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "Switch",
+                                            "description": "SwitchSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "title": ""
+                                                }
+                                            ],
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                                "title": {
+                                                    "type": "string",
+                                                    "description": "Switch 标题"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "SliderSetter",
+                                            "description": "SliderSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "min": 0,
+                                                    "max": 0
+                                                }
+                                            ],
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                                "min": {
+                                                    "$ref": "#/definitions/min"
+                                                },
+                                                "max": {
+                                                    "$ref": "#/definitions/max"
+                                                },
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "ScaleSetter",
+                                            "description": "ScaleSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "min": 0,
+                                                    "max": 0
+                                                }
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                                "min": {
+                                                    "$ref": "#/definitions/min"
+                                                },
+                                                "max": {
+                                                    "$ref": "#/definitions/max"
+                                                },
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "SelectApiSetter",
+                                            "description": "SelectApiSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "ColorSetter",
+                                            "description": "ColorSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "UploadImgSetter",
+                                            "description": "UploadImgSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "Select",
+                                            "description": "Select"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "examples": [
+                                                {
+                                                    "label": "",
+                                                    "options": [
+                                                        {
+                                                            "value": "",
+                                                            "title": ""
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "properties": {
+                                                "label": {"type": "string"},
+                                                "options": {
+                                                    "$ref": "#/definitions/options",
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "propName": {
+                                            "$ref": "#/definitions/propName"
+                                        },
+                                        "setterName": {
+                                            "const": "SubPage",
+                                            "description": "SubPageSetter"
+                                        },
+                                        "props": {
+                                            "type": "object",
+                                            "$ref": "#/definitions/props",
+                                            "additionalProperties": false,
+                                            "properties": {
+                                                "label": {
+                                                    "$ref": "#/definitions/label"
+                                                },
+                                            },
+                                            
+                                        }
+                                    }
+                                },
+                            ]
+                        },
+                    },
+                    "props": {
+                        "type": "object",
+                        "description": "上面定义了的setter，key为每个setter设置的propName。这里必须赋予一个默认值，否则setter不会被渲染",
+                        "propertyNames": {
+                            "description": "请确保这里的key和上面定义了的setter的propName保持一直"
+                        }
+                    },
+                    "dataSources": {
+                        "type": "array",
+                        "description": "数据源配置",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "apiKey": {
+                                    "type": "string",
+                                    "description": "接口唯一标识"
+                                },
+                                "propName": {
+                                    "type": "string",
+                                    "description": "接口对应的key，在自定义组件中可以从this.props.componentProps中获取到当前接口的信息"
+                                }
+                            }
+                        }
+                    }
+                },
+                "definitions": {
+                    "setters": {
+                        "description": "官方提供的配置组件，如: SlideSetter、SelectApiSetter等"
+                    },
+                    "props": {
+                        "description": "setter渲染时需要的自定义参数",
+                        "examples": [
+                            {
+                                "label": ""
+                            }
+                        ],
+                    },
+                    "propName": {
+                        "type": "string",
+                        "description": "当前setter对应的key",
+                    },
+                    "label": {
+                        "type": "string",
+                        "description": "当前setter在设计器中的标签名"
+                    },
+                    "min": {
+                        "type": "number",
+                        "description": "设置的最小值"
+                    },
+                    "max": {
+                        "type": "number",
+                        "description": "设置的最大值"
+                    },
+                    "options": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "examples": [
+                                [
+                                    {
+                                        "value": "",
+                                        "title": ""
+                                    }
+                                ]
+                            ],
+                            "properties": {
+                                "value": {
+                                    "type": ["string", "number"],
+                                    "description": "选择项的值"
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "description": "选择项标题"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+        },
+        {
+            "fileMatch": [
+                "/src/plugin/plugin.json"
+            ],
+            "schema": {
+                "type":"object",
+                "required": ["publicComponents", "main"],
+                "properties": {
+                    "publicComponents": {
+                        "type": "object",
+                        "description": "需要生效的组件必须在这里进行声明，不然无法正常加载插件",
+                        "title": "需要生效的组件",
+                        "patternProperties": {
+                            "\\s*": {
+                                "description": "这里填写的key请确保和对应组件config.json中设置的pluginComponentName保持一致，不然无法正常加载",
+                            }
+                        },
+                        "examples": [
+                            {
+                                "component-template": "components/component-template/index"
+                            }
+                        ],
+                    },
+                    "main": {
+                        "type": "string",
+                        "description": "自定义组件作为导出的默认文件",
+                        "default": "index.js"
+                    }
+                },
+            }
+        },
+        {
+            "fileMatch": [
+                "/src/plugin/components/**/index.json"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "component": {
+                        "type": "boolean",
+                        "description": "标注为自定义组件",
+                        "const": true,
+                        "default": true
+                    },
+                    "usingComponents": {
+                        "type": "object",
+                        "patternProperties": {
+                            "\\s*": {
+                                "type": "string",
+                                "description": "当前组件中所引用的其他组件",
+                            }
+                        },
+                        "examples": [
+                            {
+                                "component-template": "../component-template/index",
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+   
+}
