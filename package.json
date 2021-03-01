@@ -10,15 +10,46 @@
   ],
   "author": "lou1swu",
   "license": "MIT",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^5.1.2",
+    "validate-commit-msg": "^2.14.0"
   },
   "homepage": "https://github.com/open-dingtalk/dd-application-template",
   "repository": {
     "type": "git",
     "url": "https://github.com/open-dingtalk/dd-application-template.git"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "npx validate-commit-msg"
+    }
+  },
   "config": {
+    "validate-commit-msg": {
+      "helpMessage": "\nPlease fix your commit message (and consider using http://npm.im/commitizen)\n",
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert",
+        "build",
+        "release",
+        "custom",
+        "ci"
+      ],
+      "warnOnFail": false,
+      "autoFix": true
+    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog",
       "disableScopeLowerCase": false,
