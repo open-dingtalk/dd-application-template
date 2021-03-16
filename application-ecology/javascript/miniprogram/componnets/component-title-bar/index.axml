@@ -1,0 +1,34 @@
+<!-- 模拟官方组件头部 -->
+<view
+    class="ddworkspace-title-bar-area  {{mode}}"
+    a:if="{{titleBarModel}}"
+>
+        <view
+            class="main-title"
+            onTap="onTitleClick"
+        >
+            <image a:if="{{titleBarModel.icon}}" class="logo" src="{{titleBarModel.icon}}" mode="aspectFill" />
+            <text class="title text-ellipsis" style="color:{{titleBarModel.titleColor}};">{{titleBarModel.title}}</text>
+            <block a:if="{{titleBarModel.subLabel}}" >
+                <text class="sub-title">{{titleBarModel.subLabel}}</text>
+            </block>
+            <view 
+                a:if="{{titleBarModel.showArrow}}"
+                class="iconfont icon-next-arrow tips-arrow"
+            ></view>
+            <view a:if="{{componentProps.promotionState === PROMOTION_STATE_TRYOUT}}" class="demo-label-tag">示例</view>
+        </view>
+        <view class="extra-area">
+            <block a:if="{{titleBarModel.manage}}">
+                    <view class="action action-manage" onTap="onManageClick">
+                        <view a:if="{{titleBarModel.manage.leftIcon}}" class="action-icon left-icon" style="
+                            backgroundImage:url('{{titleBarModel.manage.leftIcon}}')
+                        "></view>
+                        <view a:if="{{titleBarModel.manage.text}}" class="action-text">{{titleBarModel.manage.text}}</view>
+                        <view a:if="{{titleBarModel.manage.rightIcon}}" class="action-icon right-icon" style="
+                            backgroundImage:url('{{titleBarModel.manage.rightIcon}}')
+                        "></view>
+                    </view>
+            </block>
+        </view>
+</view>

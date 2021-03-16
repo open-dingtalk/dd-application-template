@@ -1,0 +1,22 @@
+.page-index {
+  width: 100%;
+  background: #f2f2f6;
+  padding-bottom: 100px;
+}
+
+.page-index * {
+    box-sizing: border-box;
+}
+
+.page-index.dark {
+    background: #000;
+}
+
+  
+.loading {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

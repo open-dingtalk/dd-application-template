@@ -1,0 +1,140 @@
+.ddworkspace-title-bar-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    padding: 0 32rpx;
+    background-color: #fff;
+  }
+  .ddworkspace-title-bar-area > .main-title {
+    font-family: PingFangSC-Medium, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+  .ddworkspace-title-bar-area > .main-title .logo {
+    width: 40rpx;
+    height: 40rpx;
+    position: relative;
+    margin-right: 16rpx;
+    border-radius: 20%;
+  }
+  .ddworkspace-title-bar-area > .main-title .title {
+    font-size: 32rpx;
+    color: #171A1D;
+    letter-spacing: -0.41px;
+    max-width: 550rpx;
+  }
+  .ddworkspace-title-bar-area > .main-title .sub-title {
+    font-size: 26rpx;
+    color: rgba(17, 31, 44, 0.4);
+  }
+  .ddworkspace-title-bar-area > .main-title .sub-tag {
+    position: relative;
+    display: inline-block;
+    opacity: 0.72;
+    font-size: 20rpx;
+    -webkit-text-size-adjust: none;
+    color: #50749a;
+    letter-spacing: 0;
+    padding: 1px 5px;
+    line-height: 28rpx;
+    margin-left: 4px;
+  }
+  .ddworkspace-title-bar-area > .main-title .sub-tag::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1rpx;
+    width: 200%;
+    height: 200%;
+    border-radius: 32rpx;
+    border: 2rpx solid rgba(80, 116, 154, 0.28);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+  .ddworkspace-title-bar-area > .main-title .tips-arrow {
+    margin-left: 16rpx;
+    flex-shrink: 0;
+    font-size: 32rpx;
+    color: rgba(17, 31, 44, 0.28);
+  }
+  .ddworkspace-title-bar-area > .main-title .demo-label-tag {
+    font-family: PingFangSC-Regular;
+    position: relative;
+    display: inline-block;
+    height: 32rpx;
+    width: 64rpx;
+    line-height: 32rpx;
+    font-size: 20rpx;
+    color: #006AFE;
+    letter-spacing: 0;
+    text-align: center;
+    margin-left: 16rpx;
+    overflow: visible;
+  }
+  .ddworkspace-title-bar-area > .main-title .demo-label-tag::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -1rpx;
+    width: 200%;
+    height: 200%;
+    border-radius: 8px;
+    border: 2rpx solid #006AFE;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    pointer-events: none;
+  }
+  .ddworkspace-title-bar-area .extra-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .ddworkspace-title-bar-area .action {
+    display: flex;
+    align-items: center;
+    margin-left: 16rpx;
+    flex-shrink: 0;
+  }
+  .ddworkspace-title-bar-area .action .action-text {
+    font-size: 26rpx;
+    color: rgba(17, 31, 44, 0.56);
+    letter-spacing: 0.16px;
+    text-align: center;
+  }
+  .ddworkspace-title-bar-area .action .action-icon {
+    width: 28rpx;
+    height: 28rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .ddworkspace-title-bar-area .action .left-icon {
+    margin-right: 4rpx;
+  }
+  .ddworkspace-title-bar-area .action .right-icon {
+    margin-left: 4rpx;
+  }
+  .ddworkspace-title-bar-area.dark {
+    background-color: #121212
+  }
+  .ddworkspace-title-bar-area.dark > .main-title .title {
+    color: rgba(255, 255, 255, .96);
+  }
+  .ddworkspace-title-bar-area.dark > .main-title .sub-title {
+    color: rgba(255, 255, 255, .48);
+  }
+  .ddworkspace-title-bar-area.dark > .main-title .sub-tag {
+    color: #576A95;
+  }
+  .ddworkspace-title-bar-area.dark > .main-title .sub-tag::after {
+    border: 2rpx solid rgba(87,106,149,.4);
+  }
+  .ddworkspace-title-bar-area.dark > .main-title .tips-arrow {
+    color: rgba(255, 255, 255, .60);
+  }
+  .ddworkspace-title-bar-area.dark .action .action-text {
+    color: rgba(255, 255, 255, .60);
+  }
+  

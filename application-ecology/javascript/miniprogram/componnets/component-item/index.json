@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "component-title-bar": "../../componnets/component-title-bar/index",
+    "view-container": "../../componnets/view-container/index"
+  }
+}

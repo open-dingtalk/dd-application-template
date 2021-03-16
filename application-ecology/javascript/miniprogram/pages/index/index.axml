@@ -1,0 +1,56 @@
+<view class="page-index {{mode}}" a:if="{{sdkReady}}">
+  <!-- 确保页面mock时组件外层套一层component-item，模拟官方工作台的情景 -->
+  <component-item
+    mode="{{mode}}"
+    componentProps="{{componentsData['project-select-view'].props}}"
+  >
+    <project-select-view
+        componentName="{{componentsData['project-select-view'].componentName}}"
+        componentProps="{{componentsData['project-select-view'].props}}"
+        mode="{{mode}}"
+        config="{{config}}"
+        locale="{{locale}}"
+    >
+    </project-select-view>
+  </component-item>
+  <component-item
+    mode="{{mode}}"
+    componentProps="{{componentsData['statistical-indicator-view'].props}}"
+  >
+    <statistical-indicator-view
+        componentName="{{componentsData['statistical-indicator-view'].componentName}}"
+        componentProps="{{componentsData['statistical-indicator-view'].props}}"
+        mode="{{mode}}"
+        config="{{config}}"
+        locale="{{locale}}"
+    >
+    </statistical-indicator-view>
+  </component-item>
+  <component-item
+    mode="{{mode}}"
+    componentProps="{{componentsData['component-template'].props}}"
+  >
+    <component-template
+        componentName="{{componentsData['component-template'].componentName}}"
+        componentProps="{{componentsData['component-template'].props}}"
+        mode="{{mode}}"
+        config="{{config}}"
+        locale="{{locale}}"
+    >
+    </component-template>
+  </component-item>
+
+  <component-item
+    mode="{{mode}}"
+    componentProps="{{componentsData['chart'].props}}"
+  >
+    <chart
+        componentName="{{componentsData['chart'].componentName}}"
+        componentProps="{{componentsData['chart'].props}}"
+        mode="{{mode}}"
+        config="{{config}}"
+        locale="{{locale}}"
+    >
+    </chart>
+  </component-item>
+</view>

@@ -1,0 +1,10 @@
+<!-- 模拟官方卡片效果 -->
+<view class="
+        ddworkspace-view-container
+        transform-layer
+        {{componentProps.viewContainerStyle ? 'card-style' : ''}}
+        {{mode}}
+    "
+>
+    <slot></slot>
+</view>
