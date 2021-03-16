@@ -1,0 +1,5 @@
+<view class="component-template {{mode}}" onTap="onContentClick">
+  这个是组件模板，请复制文件夹创建组件，请在模板代码基础上修改
+  <view class="success-content">{{successsContent}}</view>
+  <view class="error-content">{{errorContent}}</view>
+</view>

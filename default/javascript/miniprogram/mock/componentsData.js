@@ -24,5 +24,12 @@ export const componentsData = {
         props: {
             marginBottom: 8,
         }
+    },
+    'chart': {
+        pluginComponentName: 'chart',
+        componentName: 'chart',
+        props: {
+            marginBottom: 8,
+        }
     }
 };

@@ -17,4 +17,10 @@
     config="{{config}}"
   >
   </component-template>
+  <chart
+    componentName="{{componentsData['chart'].componentName}}"
+    componentProps="{{componentsData['chart'].props}}"
+    config="{{config}}"
+  >
+  </chart>
 </view>

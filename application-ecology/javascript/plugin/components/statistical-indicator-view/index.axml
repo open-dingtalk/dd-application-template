@@ -1,0 +1,8 @@
+<view class="statistical-indicator-view {{mode}}" style="marginBottom:{{componentProps.marginBottom}}px">
+    <block a:for="{{dataSource}}" a:for-item="item" key="item_{{index}}">
+      <view class="item">
+        <text class="y">{{item.value}}万元</text>
+        <text class="x">{{item.name}}</text>
+      </view>
+    </block>
+</view>

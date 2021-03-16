@@ -1,0 +1,46 @@
+.comp-project-select {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.comp-project-select .row {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+
+.comp-project-select .row-title {
+  flex: 1;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.comp-project-select.dark .row-title {
+    color: #fff;
+  }
+
+.comp-project-select .row-extra {
+  flex-basis: initial;
+  font-size: 32rpx;
+  color: #1890FF;
+}
+
+
+.comp-project-select .row-arrow {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 16rpx;
+}
+
+.schedule-scroll {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  width: 100%;
+  height:100%;
+  z-index: 9999;
+  background: rgba(0,0,0,.4)
+}

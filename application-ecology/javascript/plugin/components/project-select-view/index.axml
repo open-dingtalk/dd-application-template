@@ -1,0 +1,8 @@
+<view class="comp-project-select {{mode}}" style="marginBottom:{{componentProps.marginBottom}}px">
+  <picker onChange="onPickerChange" value="{{arrIndex}}" range="{{dataSource}}" range-key="name">
+      <view class="row">
+        <view class="row-title">{{dataSource[arrIndex].name}}</view>
+        <view class="row-extra">切换</view>
+      </view>
+    </picker>
+</view>

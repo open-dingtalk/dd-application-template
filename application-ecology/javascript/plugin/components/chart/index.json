@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f2": "@antv/my-f2"
+  }
+}

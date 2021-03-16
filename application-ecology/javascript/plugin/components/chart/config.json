@@ -1,0 +1,13 @@
+{
+  "componentName": "myCompany/MyComponent",
+  "name": "我的图表示例组件",
+  "icon": "https://gw.alicdn.com/imgextra/i3/O1CN01Isd9Ds261lXlQ6okk_!!6000000007602-2-tps-60-60.png",
+  "category": "custom",
+  "corpId": "服务商企业的corpId",
+  "previewUrl": "组件的预览图CDN地址",
+  "previewHeight": 100,
+  "props": {
+    "useContainerStyleInStandardWorktab": true,
+    "useComponentHeadInStandardWorktab": true
+  }
+}

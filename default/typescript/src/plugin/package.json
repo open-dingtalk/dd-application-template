@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "types-dingtalk-miniapp": "^0.3.4"
+    "types-dingtalk-miniapp": "^0.3.4",
+    "@antv/my-f2": "^2.1.4"
   }
 }
