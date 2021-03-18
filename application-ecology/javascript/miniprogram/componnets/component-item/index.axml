@@ -1,0 +1,22 @@
+<!-- 模拟官方标准组件外壳-仅模拟 -->
+<view class="
+        ddworkspace-component-item
+        {{mode}}
+    "
+>
+  <view-container
+    mode="{{mode}}"
+    componentProps="{{componentProps}}"
+  >
+    <component-title-bar
+        a:if="{{
+            componentProps.ddWorkspaceComponentHead
+        }}"
+        mode="{{mode}}"
+        componentProps="{{componentProps}}"
+        titleBarModel="{{componentProps.ddWorkspaceComponentHead}}"
+    >
+    </component-title-bar>
+    <slot></slot>
+  </view-container>
+</view>

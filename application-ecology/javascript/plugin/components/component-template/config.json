@@ -1,0 +1,16 @@
+{
+  "pluginComponentName": "插件中导出的组件英文名，例如 component-template",
+  "name": "组件模板",
+  "icon": "https://static.dingtalk.com/media/lALOB0o7K8yQzJA_144_144.png",
+  "previewUrl": "组件的预览图CDN地址",
+  "previewHeight": 100,
+  "props": {
+    "useComponentHeadInStandardWorktab": true,
+    "useContainerStyleInStandardWorktab": true,
+    "gateWayApi": {}
+  },
+  "dataSources": [{
+    "apiKey": "httpbin",
+    "propName": "gateWayApi"
+  }]
+}

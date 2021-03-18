@@ -1,0 +1,14 @@
+.component-template {
+  line-height: 32rpx;
+  font-size:24rpx;
+  padding: 24rpx 36rpx;
+}
+
+.component-template.dark {
+    color: #fff;
+}
+
+.success-content,
+.error-content {
+    overflow: hidden;
+}

@@ -1,0 +1,10 @@
+{
+  "pluginComponentName": "statistical-indicator-view",
+  "name": "业务统计卡片",
+  "icon": "https://gw.alicdn.com/tfs/TB1waSLcGL7gK0jSZFBXXXZZpXa-48-48.png",
+  "previewUrl": "https://img.alicdn.com/tfs/TB1jq3RdEY1gK0jSZFMXXaWcVXa-748-296.jpg",
+  "previewHeight": 100,
+  "props": {
+    "useContainerStyleInStandardWorktab": true
+  }
+}

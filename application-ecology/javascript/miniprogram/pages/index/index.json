@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "标准化组件开发DEMO",
+  "usingComponents": {
+    "project-select-view": "plugin://myPlugin/project-select-view",
+    "statistical-indicator-view": "plugin://myPlugin/statistical-indicator-view",
+    "component-template": "plugin://myPlugin/component-template",
+    "chart": "plugin://myPlugin/chart",
+    "component-title-bar": "../../componnets/component-title-bar/index",
+    "view-container": "../../componnets/view-container/index",
+    "component-item": "../../componnets/component-item/index"
+  }
+}
