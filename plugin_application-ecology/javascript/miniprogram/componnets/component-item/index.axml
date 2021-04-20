@@ -10,11 +10,11 @@
   >
     <component-title-bar
         a:if="{{
-            componentProps.ddWorkspaceComponentHead
+            componentProps.__useStandardHead__
         }}"
         mode="{{mode}}"
         componentProps="{{componentProps}}"
-        titleBarModel="{{componentProps.ddWorkspaceComponentHead}}"
+        titleBarModel="{{componentProps.__useStandardHead__}}"
     >
     </component-title-bar>
     <slot></slot>
