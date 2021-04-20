@@ -1,7 +1,5 @@
 {
   "publicComponents": {
-    "project-select-view": "components/project-select-view/index",
-    "statistical-indicator-view": "components/statistical-indicator-view/index",
     "component-template": "components/component-template/index",
     "chart": "components/chart/index"
   },

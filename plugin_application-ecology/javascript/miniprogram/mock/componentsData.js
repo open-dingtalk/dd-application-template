@@ -5,8 +5,6 @@
  */
  import configChart from '../../plugin/components/chart/config.json';
  import configComponentTemplate from '../../plugin/components/component-template/config.json';
- import configProjectSelectView from '../../plugin/components/project-select-view/config.json';
- import configStatisticalIndicatorView from '../../plugin/components/statistical-indicator-view/config.json';
  
  
  /**
@@ -85,24 +83,6 @@
   * 新增组件时请依葫芦画瓢
   */
  export const componentsData = {
-     'project-select-view': {
-         componentName: configProjectSelectView.componentName, // 系统自动生成
-         props: {
-             ...configProjectSelectView.props,
-             ...generateStandardProps(configProjectSelectView),
-         }
-     },
- 
-     'statistical-indicator-view': {
-         pluginComponentName: 'statistical-indicator-view',
-         componentName: 'statistical-indicator-view',
-         props: {
-             ...configStatisticalIndicatorView.props,
-             ...generateStandardProps(configStatisticalIndicatorView),
-             // 额外的mock数据-开发者可自行添加
-             source: 1,
-         }
-     },
      'component-template': {
          pluginComponentName: 'component-template',
          componentName: 'component-template',

@@ -3,7 +3,7 @@
   "name": "组件模板",
   "icon": "https://static.dingtalk.com/media/lALOB0o7K8yQzJA_144_144.png",
   "previewUrl": "组件的预览图CDN地址",
-  "previewHeight": 100,
+  "previewHeight": 200,
   "quickSetting": {
     "useStandardHead": true,
     "useStandardContainer": true,
