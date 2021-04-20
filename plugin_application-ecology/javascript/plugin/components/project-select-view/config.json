@@ -4,6 +4,11 @@
   "icon": "https://static.dingtalk.com/media/lALOB0o7K8yQzJA_144_144.png",
   "previewUrl": "https://img.alicdn.com/tfs/TB1KcAWdrj1gK0jSZFOXXc7GpXa-750-100.jpg",
   "previewHeight": 100,
+  "quickSetting": {
+    "useStandardHead": true,
+    "useStandardContainer": false,
+    "containerType": "standard"
+  },
   "props": {
 
   }

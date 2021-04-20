@@ -4,7 +4,11 @@
   "icon": "https://gw.alicdn.com/tfs/TB1waSLcGL7gK0jSZFBXXXZZpXa-48-48.png",
   "previewUrl": "https://img.alicdn.com/tfs/TB1jq3RdEY1gK0jSZFMXXaWcVXa-748-296.jpg",
   "previewHeight": 100,
+  "quickSetting": {
+    "useStandardHead": true,
+    "useStandardContainer": true,
+    "containerType": "standard"
+  },
   "props": {
-    "useContainerStyleInStandardWorktab": true
   }
 }

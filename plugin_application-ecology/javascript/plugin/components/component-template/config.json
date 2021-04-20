@@ -4,13 +4,11 @@
   "icon": "https://static.dingtalk.com/media/lALOB0o7K8yQzJA_144_144.png",
   "previewUrl": "组件的预览图CDN地址",
   "previewHeight": 100,
-  "props": {
-    "useComponentHeadInStandardWorktab": true,
-    "useContainerStyleInStandardWorktab": true,
-    "gateWayApi": {}
+  "quickSetting": {
+    "useStandardHead": true,
+    "useStandardContainer": true,
+    "containerType": "standard"
   },
-  "dataSources": [{
-    "apiKey": "httpbin",
-    "propName": "gateWayApi"
-  }]
+  "props": {
+  }
 }

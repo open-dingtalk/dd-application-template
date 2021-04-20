@@ -6,8 +6,11 @@
   "corpId": "服务商企业的corpId",
   "previewUrl": "组件的预览图CDN地址",
   "previewHeight": 100,
+  "quickSetting": {
+    "useStandardHead": true, 
+    "useStandardContainer": true, 
+    "containerType": "doubleHeight"
+  },
   "props": {
-    "useContainerStyleInStandardWorktab": true,
-    "useComponentHeadInStandardWorktab": true
   }
 }
