@@ -5,6 +5,7 @@
         {{componentProps.viewContainerStyle ? 'card-style' : ''}}
         {{mode}}
     "
+    style={{height: componentProps.__containerType__  ? componentProps.__containerType__ : undefined}}
 >
     <slot></slot>
 </view>
