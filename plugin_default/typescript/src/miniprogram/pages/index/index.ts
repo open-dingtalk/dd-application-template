@@ -26,9 +26,9 @@ Page({
 
     // 加载SDK包，如果SDK升级，需要修改@后的版本号
     dd.loadPlugin({
-      plugin: '5000000000100449@0.0.2',
+      plugin: '5000000000477928@0.0.5',
       success: () => {
-        this.worktab = requirePlugin('dynamic-plugin://5000000000100449');
+        this.worktab = requirePlugin('dynamic-plugin://5000000000477928');
         const plugin = requirePlugin('myPlugin');
 
         plugin.registerWorktab(this.worktab);
