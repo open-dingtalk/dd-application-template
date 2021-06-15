@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest",
     "prestart": "cd src/plugin && yarn",
-    "start": " gulp --gulpfile gulpfile.js --distPath dist"
+    "start": " gulp --gulpfile gulpfile.js --src src --dist dist"
   },
   "repository": {
     "type": "git",

@@ -51,14 +51,14 @@ Component<Props, Data, Methods>({
   didMount() {
     getLifecycleSdk().didMount(this.props.componentName);
     // 监听项目变更事件 来自 project-select-view
-    getSdk().listenCustomEvent('dingtalk/changeProject', this.changeProject);
+    getSdk().listenCustomEvent('dingtalk/changeProject', this.changeProject.bind(this));
   },
   didUpdate(prevProps, prevData) {
     getLifecycleSdk().didUpdate(this.props.componentName);
   },
   didUnmount() {
     getLifecycleSdk().didUnmount(this.props.componentName);
-    getSdk().removeCustomEvent('dingtalk/changeProject', this.changeProject);
+    getSdk().removeCustomEvent('dingtalk/changeProject', this.changeProject.bind(this));
   },
   methods: {
     changeProject(selectedProject) {

@@ -17,9 +17,8 @@ const del = require('del');
 const ts = require('gulp-typescript');
 
 const rootPath = path.join(__dirname, './');
-const srcPath = path.join(rootPath, 'src');
-const distPath = path.join(rootPath, yargs.argv.distPath);
-
+const srcPath = path.resolve(rootPath, yargs.argv.src);
+const distPath = path.resolve(rootPath, yargs.argv.dist);
 
 function clean() {
   return del(distPath, {
@@ -98,7 +97,7 @@ function installNodeModules(callback) {
   try {
     execSync('yarn --prod', {
       cwd: `${distPath}/plugin`,
-      stdio: 'pipe',
+      stdio: 'inherit',
     });
   } catch (e) {
     error = e;
@@ -120,7 +119,6 @@ function auto() {
 
 function successTips(callback) {
   callback();
-  console.log('编译成功，将编译后生成的`dist`文件夹在小程序IDE中打开，注意打开时选择应用类型为钉钉工作台插件');
 }
 
 exports.dist = series(

@@ -1,0 +1,6 @@
+{
+    "type": "plugin",
+    "typescript": true,
+    "base": "./src",
+    "outDir": "./dist"
+}

@@ -1,0 +1,6 @@
+{
+  "miniprogramRoot": "dist/miniprogram",
+  "pluginRoot": "dist/plugin",
+  "compileType": "plugin",
+  "component2": true
+}
