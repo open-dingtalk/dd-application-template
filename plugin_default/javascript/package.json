@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "此模板是定制工作台动态插件开发专用，需使用指定版本的小程序IDE进行开发，请从\"钉钉门户伙伴共创群\"中获取IDE。 此模板中的4个组件为示例组件，请提交版本之前删除以减少插件的包大小",
   "scripts": {
-    "postinstall": "cd plugin && npm"
+    "postinstall": "cd plugin && npm i"
   },
   "keywords": [],
   "author": "",

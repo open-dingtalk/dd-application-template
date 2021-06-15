@@ -4,9 +4,9 @@
   "description": "worktab-plugin typescript",
   "scripts": {
     "test": "jest",
-    "prestart": "cd src/plugin && npm",
+    "prestart": "cd src/plugin && npm i",
     "start": " gulp --gulpfile gulpfile.js --src src --dist dist",
-    "postinstall": "cd src/plugin && npm"
+    "postinstall": "cd src/plugin && npm i"
   },
   "repository": {
     "type": "git",
