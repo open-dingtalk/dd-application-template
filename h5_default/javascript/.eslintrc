@@ -1,0 +1,11 @@
+{
+  "extends": ["eslint-config-ali/react", "eslint-config-ali/jsx-a11y"],
+  "globals": {
+    "browser": true,
+    "dd": true
+  },
+  "rules": {
+    "no-console": 0,
+    "react/prop-types": 0
+  }
+}
