@@ -1,0 +1,9 @@
+{
+  "extends": "eslint-config-ali",
+  "globals": {
+    "getApp": true,
+    "Page": true,
+    "Component": true,
+    "dd": true
+  },
+}
