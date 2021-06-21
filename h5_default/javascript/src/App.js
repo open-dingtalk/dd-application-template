@@ -47,7 +47,7 @@ const alert = function (msg) {
     },
     onFail() {},
   }).catch(() => {
-    dd.alert(msg);
+    alert(msg);
   });
 };
 

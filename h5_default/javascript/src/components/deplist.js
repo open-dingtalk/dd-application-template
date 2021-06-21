@@ -30,7 +30,7 @@ class H5AppQSDeplist extends React.Component {
       ],
     });
     dd.error((err) => {
-      dd.alert(`dd.config error: ${ JSON.stringify(err)}`);
+      alert(`dd.config error: ${ JSON.stringify(err)}`);
     });
 
     fetch(`${host }/user/simplelist?department_id=${ this.props.deptId}`)
@@ -49,8 +49,8 @@ class H5AppQSDeplist extends React.Component {
       corpId: this.props.config.corpId, // 企业id,必须是用户所属的企业的corpid
       userId: userid, // 用户的工号
       onSuccess() {},
-      onFail(err) { dd.alert(`fail:${ JSON.stringify(err)}`); },
-    }).catch((err) => dd.alert(`exp:${ JSON.stringify(err) }${JSON.stringify(this.props.config)}`));
+      onFail(err) { alert(`fail:${ JSON.stringify(err)}`); },
+    }).catch((err) => alert(`exp:${ JSON.stringify(err) }${JSON.stringify(this.props.config)}`));
   }
 
   render() {
