@@ -29,7 +29,7 @@ Page({
 
     // 加载SDK包，如果SDK升级，需要修改@后的版本号
     dd.loadPlugin({
-      plugin: "5000000000477928@0.0.15",
+      plugin: "5000000000477928@0.0.16",
       success: () => {
         this.worktab = requirePlugin("dynamic-plugin://5000000000477928");
         const plugin = requirePlugin("myPlugin");
