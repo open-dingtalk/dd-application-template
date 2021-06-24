@@ -2,5 +2,55 @@
     "type": "plugin",
     "typescript": true,
     "base": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "devConfig": {
+        "sdk": {
+            "miniAppId": "5000000000477928",
+            "version": "0.0.16"
+        },
+        "mock": {
+            "componentsData": {
+                "project-select-view": {
+                    "id": "",
+                    "mode": "light",
+                    "locale": "zh_CN",
+                    "config": {
+                        "corpId": ""
+                    },
+                    "componentName": "project-select-view",
+                    "componentProps": {
+                        "marginBottom": 16
+                    }
+                },
+                "statistical-indicator-view": {
+                    "id": "",
+                    "mode": "light",
+                    "locale": "zh_CN",
+                    "config": {
+                        "corpId": ""
+                    },
+                    "componentName": "statistical-indicator-view",
+                    "componentProps": {
+                        "marginBottom": 8,
+                        "source": 1,
+                        "gateWayApi": {
+                            "apiKey": "my_api_name"
+                        }
+                    }
+                },
+                "chart": {
+                    "id": "",
+                    "mode": "light",
+                    "locale": "zh_CN",
+                    "config": {
+                        "corpId": ""
+                    },
+                    "componentName": "chart",
+                    "componentProps": {
+                        "marginBottom": 8
+                    }
+                }
+            }
+        }
+    }
 }

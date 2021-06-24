@@ -3,7 +3,6 @@
   "usingComponents": {
     "project-select-view": "plugin://myPlugin/project-select-view",
     "statistical-indicator-view": "plugin://myPlugin/statistical-indicator-view",
-    "component-template": "plugin://myPlugin/component-template",
     "chart": "plugin://myPlugin/chart"
   }
 }

@@ -1,12 +1,9 @@
-import { componentsData } from "../../mock/componentsData";
+import config from "../../../ding.config.json";
 
 Page({
   data: {
     sdkReady: false,
-    componentsData: componentsData,
-    config: {
-      corpId: ""
-    }
+    componentsData: config.devConfig.mock.componentsData,
   },
   onLoad(query) {
     if (!dd.canIUse("plugin.dynamic")) {
@@ -26,9 +23,9 @@ Page({
 
     // 加载SDK包，如果SDK升级，需要修改@后的版本号
     dd.loadPlugin({
-      plugin: "5000000000477928@0.0.16",
+      plugin: `${config.devConfig.sdk.miniAppId}@${config.devConfig.sdk.version}`,
       success: () => {
-        this.worktab = requirePlugin("dynamic-plugin://5000000000477928");
+        this.worktab = requirePlugin(`dynamic-plugin://${config.devConfig.sdk.miniAppId}`);
         const plugin = requirePlugin("myPlugin");
 
         plugin.registerWorktab(this.worktab);

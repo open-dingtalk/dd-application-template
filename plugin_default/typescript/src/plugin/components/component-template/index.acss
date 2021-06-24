@@ -1,5 +1,0 @@
-.component-template {
-  line-height: 32rpx;
-  font-size:24rpx;
-  padding: 24rpx 36rpx;
-}
