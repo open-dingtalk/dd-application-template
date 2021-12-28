@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.drawer-title {
+  max-width: 200px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-drawer .dtm-drawer-sidebar {
+  min-height: 100vh;
+}
