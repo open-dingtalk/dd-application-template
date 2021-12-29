@@ -74,9 +74,12 @@ module.exports = function (proxy, allowedHost) {
         // Enable custom sockjs pathname for websocket connection to hot reloading server.
         // Enable custom sockjs hostname, pathname and port for websocket connection
         // to hot reloading server.
-        hostname: sockHost,
-        pathname: sockPath,
-        port: sockPort,
+        hostname: 'localhost',
+        pathname: '/ws',
+        // password: 'dev-server',
+        port: 3002,
+        protocol: 'ws',
+        // username: 'webpack',
       },
       overlay: {
         errors: true,

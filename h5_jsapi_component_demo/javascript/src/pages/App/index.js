@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './App.css';
 import { Tabs, Grid, NavBar, Drawer, List } from 'dingtalk-design-mobile';
 import exportComponent from './basicComponents'
@@ -131,6 +131,162 @@ const jsapiListData = [
         key: 'device.base.getWifiStatus',
         desc: '123'
       },
+      {
+        name: 'device.base.getPhoneInfo',
+        key: 'device.base.getPhoneInfo',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Ding',
+    items: [
+      {
+        name: 'biz.ding.create',
+        key: 'biz.ding.create',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Drive',
+    items: [
+      {
+        name: 'biz.cspace.saveFile',
+        key: 'biz.cspace.saveFile',
+        desc: '123'
+      },
+      {
+        name: 'biz.cspace.chooseSpaceDir',
+        key: 'biz.cspace.chooseSpaceDir',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Extra',
+    items: [
+      {
+        name: 'device.base.getUUID',
+        key: 'device.base.getUUID',
+        desc: '123'
+      },
+      {
+        name: 'biz.util.previewImage',
+        key: 'biz.util.previewImage',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Location',
+    items: [
+      {
+        name: 'device.geolocation.get',
+        key: 'device.geolocation.get',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'OpenLink',
+    items: [
+      {
+        name: 'biz.util.openLink',
+        key: 'biz.util.openLink',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Telephone',
+    items: [
+      {
+        name: 'biz.telephone.showCallMenu',
+        key: 'biz.telephone.showCallMenu',
+        desc: '123'
+      },
+      {
+        name: 'biz.telephone.checkBizCall',
+        key: 'biz.telephone.checkBizCall',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Util',
+    items: [
+      {
+        name: 'biz.util.open',
+        key: 'biz.util.open',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'Navigation',
+    items: [
+      {
+        name: 'biz.navigation.goBack',
+        key: 'biz.navigation.goBack',
+        desc: '123'
+      },
+    ],
+  },
+  {
+    header: 'UI-dd',
+    items: [
+      {
+        name: 'device.notification.toast',
+        key: 'device.notification.toast',
+        desc: '123'
+      },
+      {
+        name: 'device.notification.alert',
+        key: 'device.notification.alert',
+        desc: '123'
+      },
+      {
+        name: 'device.notification.confirm',
+        key: 'device.notification.confirm',
+        desc: '123'
+      },
+      {
+        name: 'device.notification.showPreloader',
+        key: 'device.notification.showPreloader',
+        desc: '123'
+      },
+      {
+        name: 'device.notification.actionSheet',
+        key: 'device.notification.actionSheet',
+        desc: '123'
+      },
+      {
+        name: 'biz.util.chosen',
+        key: 'biz.util.chosen',
+        desc: '123'
+      },
+      {
+        name: 'biz.util.datepicker',
+        key: 'biz.util.datepicker',
+        desc: '123'
+      },
+      {
+        name: 'biz.util.timepicker',
+        key: 'biz.util.timepicker',
+        desc: '123'
+      },
+      {
+        name: 'biz.util.datetimepicker',
+        key: 'biz.util.datetimepicker',
+        desc: '123'
+      },
+      {
+        name: 'biz.calendar.chooseDateTime',
+        key: 'biz.calendar.chooseDateTime',
+        desc: '123'
+      },
+      
     ],
   },
 ]
@@ -143,6 +299,7 @@ class App extends React.Component {
       drawerTitle: '',
       drawerContent: null,
     }
+    console.log(props);
   }
   onHandleBasicComponentGridClick = (item, index) => {
     const id = item.id;
@@ -212,7 +369,7 @@ class App extends React.Component {
           visible={drawerVisible}
           className="custom-drawer"
         >
-          <NavBar rightContent={<div onClick={() =>this.setState({ drawerVisible: false,})}>确定</div>}>
+          <NavBar rightContent={<div onClick={() =>this.setState({ drawerVisible: false,})}>关闭</div>}>
             <span className='drawer-title'>{drawerTitle}</span>
           </NavBar>
           {drawerContent}
