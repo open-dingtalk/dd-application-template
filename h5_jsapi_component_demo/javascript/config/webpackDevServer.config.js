@@ -77,7 +77,7 @@ module.exports = function (proxy, allowedHost) {
         hostname: 'localhost',
         pathname: '/ws',
         // password: 'dev-server',
-        port: 3002,
+        port: process.env.PORT,
         protocol: 'ws',
         // username: 'webpack',
       },

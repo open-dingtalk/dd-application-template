@@ -299,7 +299,6 @@ class App extends React.Component {
       drawerTitle: '',
       drawerContent: null,
     }
-    console.log(props);
   }
   onHandleBasicComponentGridClick = (item, index) => {
     const id = item.id;
@@ -346,10 +345,11 @@ class App extends React.Component {
             {
               jsapiListData.map((listConfig, index) => {
                 return (
-                  <List renderHeader={() => listConfig.header}>
+                  <List key={listConfig.header} renderHeader={() => listConfig.header}>
                     {listConfig.items.map((item, idx) => {
                       return (
                         <Item
+                          key={item.key}
                           arrow="horizontal"
                           brief={item.desc}
                           onClick={() => this.onHandleJsapiListItemClick(item)}
