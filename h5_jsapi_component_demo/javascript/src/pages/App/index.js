@@ -35,7 +35,7 @@ const jsapiListData = [
     items: [{
       name: 'runtime.permission.requestAuthCode',
       key: 'runtime.permission.requestAuthCode',
-      desc: '123'
+      desc: '获取微应用免登授权码'
     }],
   },
   {
@@ -44,22 +44,22 @@ const jsapiListData = [
       {
         name: 'biz.chat.pickConversation',
         key: 'biz.chat.pickConversation',
-        desc: '123'
+        desc: '获取会话信息'
       },
       {
         name: 'biz.chat.chooseConversationByCorpId',
         key: 'biz.chat.chooseConversationByCorpId',
-        desc: '123'
+        desc: '根据corpid选择会话'
       },
       {
         name: 'biz.chat.toConversation',
         key: 'biz.chat.toConversation',
-        desc: '123'
+        desc: '根据chatId跳转到对应会话'
       },
       {
         name: 'biz.chat.openSingleChat',
         key: 'biz.chat.openSingleChat',
-        desc: '123'
+        desc: '打开与某个用户的单聊会话'
       },
     ],
   },
@@ -69,42 +69,42 @@ const jsapiListData = [
       {
         name: 'biz.contact.chooseMobileContacts',
         key: 'biz.contact.chooseMobileContacts',
-        desc: '123'
+        desc: '选取手机通讯录'
       },
       {
         name: 'biz.customContact.multipleChoose',
         key: 'biz.customContact.multipleChoose',
-        desc: '123'
+        desc: '多选自定义联系人'
       },
       {
         name: 'biz.customContact.choose',
         key: 'biz.customContact.choose',
-        desc: '123'
+        desc: '单选自定义联系人'
       },
       {
         name: 'biz.contact.complexPicker',
         key: 'biz.contact.complexPicker',
-        desc: '123'
+        desc: '选择部门和人'
       },
       {
         name: 'biz.contact.departmentsPicker',
         key: 'biz.contact.departmentsPicker',
-        desc: '123'
+        desc: '选择部门信息'
       },
       {
         name: 'biz.contact.externalComplexPicker',
         key: 'biz.contact.externalComplexPicker',
-        desc: '123'
+        desc: '选择外部联系人'
       },
       {
         name: 'biz.contact.externalEditForm',
         key: 'biz.contact.externalEditForm',
-        desc: '123'
+        desc: '编辑外部联系人'
       },
       {
         name: 'biz.contact.createGroup',
         key: 'biz.contact.createGroup',
-        desc: '123'
+        desc: '创建企业群'
       },
     ],
   },
@@ -114,27 +114,27 @@ const jsapiListData = [
       {
         name: 'device.connection.getNetworkType',
         key: 'device.connection.getNetworkType',
-        desc: '123'
+        desc: '获取网络类型'
       },
       {
         name: 'device.notification.vibrate',
         key: 'device.notification.vibrate',
-        desc: '123'
+        desc: 'device.notification.vibrate'
       },
       {
         name: 'biz.util.scan',
         key: 'biz.util.scan',
-        desc: '123'
+        desc: '扫条形码、二维码'
       },
       {
         name: 'device.base.getWifiStatus',
         key: 'device.base.getWifiStatus',
-        desc: '123'
+        desc: '获取wifi状态'
       },
       {
         name: 'device.base.getPhoneInfo',
         key: 'device.base.getPhoneInfo',
-        desc: '123'
+        desc: '获取手机基础信息'
       },
     ],
   },
@@ -144,7 +144,7 @@ const jsapiListData = [
       {
         name: 'biz.ding.create',
         key: 'biz.ding.create',
-        desc: '123'
+        desc: 'DING 2.0 发钉'
       },
     ],
   },
@@ -154,12 +154,12 @@ const jsapiListData = [
       {
         name: 'biz.cspace.saveFile',
         key: 'biz.cspace.saveFile',
-        desc: '123'
+        desc: '保存文件到钉盘'
       },
       {
         name: 'biz.cspace.chooseSpaceDir',
         key: 'biz.cspace.chooseSpaceDir',
-        desc: '123'
+        desc: '选取钉盘目录'
       },
     ],
   },
@@ -169,12 +169,12 @@ const jsapiListData = [
       {
         name: 'device.base.getUUID',
         key: 'device.base.getUUID',
-        desc: '123'
+        desc: '获取uuid'
       },
       {
         name: 'biz.util.previewImage',
         key: 'biz.util.previewImage',
-        desc: '123'
+        desc: '图片预览'
       },
     ],
   },
@@ -184,7 +184,7 @@ const jsapiListData = [
       {
         name: 'device.geolocation.get',
         key: 'device.geolocation.get',
-        desc: '123'
+        desc: '获取当前地理位置信息（单次定位）'
       },
     ],
   },
@@ -194,7 +194,7 @@ const jsapiListData = [
       {
         name: 'biz.util.openLink',
         key: 'biz.util.openLink',
-        desc: '123'
+        desc: '打开目标页面'
       },
     ],
   },
@@ -204,12 +204,12 @@ const jsapiListData = [
       {
         name: 'biz.telephone.showCallMenu',
         key: 'biz.telephone.showCallMenu',
-        desc: '123'
+        desc: '通用电话拨打'
       },
       {
         name: 'biz.telephone.checkBizCall',
         key: 'biz.telephone.checkBizCall',
-        desc: '123'
+        desc: '检查某企业的办公电话开通状态'
       },
     ],
   },
@@ -219,7 +219,7 @@ const jsapiListData = [
       {
         name: 'biz.util.open',
         key: 'biz.util.open',
-        desc: '123'
+        desc: '打开应用内页面'
       },
     ],
   },
@@ -229,7 +229,7 @@ const jsapiListData = [
       {
         name: 'biz.navigation.goBack',
         key: 'biz.navigation.goBack',
-        desc: '123'
+        desc: '返回上一级页面'
       },
     ],
   },
@@ -239,52 +239,52 @@ const jsapiListData = [
       {
         name: 'device.notification.toast',
         key: 'device.notification.toast',
-        desc: '123'
+        desc: 'toast'
       },
       {
         name: 'device.notification.alert',
         key: 'device.notification.alert',
-        desc: '123'
+        desc: 'alert'
       },
       {
         name: 'device.notification.confirm',
         key: 'device.notification.confirm',
-        desc: '123'
+        desc: 'confirm'
       },
       {
         name: 'device.notification.showPreloader',
         key: 'device.notification.showPreloader',
-        desc: '123'
+        desc: '显示加载'
       },
       {
         name: 'device.notification.actionSheet',
         key: 'device.notification.actionSheet',
-        desc: '123'
+        desc: 'actionsheet'
       },
       {
         name: 'biz.util.chosen',
         key: 'biz.util.chosen',
-        desc: '123'
+        desc: '下拉控件'
       },
       {
         name: 'biz.util.datepicker',
         key: 'biz.util.datepicker',
-        desc: '123'
+        desc: '日期选择器'
       },
       {
         name: 'biz.util.timepicker',
         key: 'biz.util.timepicker',
-        desc: '123'
+        desc: '时间选择器'
       },
       {
         name: 'biz.util.datetimepicker',
         key: 'biz.util.datetimepicker',
-        desc: '123'
+        desc: '日期及时间选择器'
       },
       {
         name: 'biz.calendar.chooseDateTime',
         key: 'biz.calendar.chooseDateTime',
-        desc: '123'
+        desc: '月历组件：选择某时间'
       },
       
     ],
