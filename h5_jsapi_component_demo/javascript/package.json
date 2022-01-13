@@ -19,7 +19,7 @@
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
-    "dingtalk-design-mobile": "^1.7.0-beta.1",
+    "dingtalk-design-mobile": "^1.7.0-beta.2",
     "dingtalk-jsapi": "^2.13.68",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
