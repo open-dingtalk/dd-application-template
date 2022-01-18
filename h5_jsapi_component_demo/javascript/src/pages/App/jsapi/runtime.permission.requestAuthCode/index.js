@@ -8,6 +8,9 @@ const ApiComponent = () => {
         title: '温馨提示',
         message: '模拟器环境为开发环境，不需要进行jsapi鉴权',
       });
+      dd.runtime.permission.requestAuthCode({
+        corpId: window.__corpId__,
+      });
     }
 
   return (
