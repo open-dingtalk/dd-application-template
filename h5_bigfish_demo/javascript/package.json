@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "bigfish",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "bigfish dev --port 3000",
+    "dev": "bigfish dev --port 3000",
+    "analyze": "bigfish dev --analyze",
+    "devs": "bigfish dev --no-mock",
+    "test": "bigfish test",
+    "cov": "bigfish cov",
+    "build": "bigfish build",
+    "pack": "bigfish pack",
+    "lint": "bigfish lint --style",
+    "precommit": "bigfish lint --staged --prettier --style --fix",
+    "lint:fix": "bigfish lint --style --prettier --fix",
+    "help": "bigfish help",
+    "version": "bigfish -v",
+    "ci": "bigfish lint && bigfish cov"
+  },
+  "dependencies": {
+    "dingtalk-design-mobile": "^1.6.2",
+    "@alipay/bigfish": "^3.4.0",
+    "axios": "^0.19.0",
+    "dingtalk-jsapi": "^2.13.23"
+  },
+  "engines": {
+    "install-alinode": "4"
+  },
+  "ci": {
+    "version": "alinode=4"
+  },
+  "npm": {
+    "mode": "yarn"
+  },
+  "config": {
+    "assets": {
+      "hash": true
+    }
+  }
+}

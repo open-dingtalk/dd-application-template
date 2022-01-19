@@ -1,0 +1,22 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# misc
+.DS_Store
+npm-debug.log*
+
+# umi
+.umi
+.umi-production
+
+# build
+_dist/
+_package/
+mobile.config.js
+www/
+coverage
+.node
+.vscode
