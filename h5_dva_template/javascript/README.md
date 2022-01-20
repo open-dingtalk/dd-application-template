@@ -1,6 +1,7 @@
 ## Project setup
 ```
 npm install
+npm start
 ```
 
 ## Learn More
