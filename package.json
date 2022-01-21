@@ -16,6 +16,7 @@
   "devDependencies": {
     "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.27.0",
     "husky": "^5.1.2",
     "validate-commit-msg": "^2.14.0"
   },

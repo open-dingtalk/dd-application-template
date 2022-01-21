@@ -15,6 +15,8 @@ Page({
         userId:'',
         userName:'',
         hideList: true,
+        abc: 12,
+        a:rest
     },
     loginSystem() {
         dd.showLoading();

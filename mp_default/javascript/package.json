@@ -1,0 +1,15 @@
+{
+  "name": "mp_default",
+  "version": "1.0.0",
+  "description": "mp default template",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.27.0"
+  }
+}

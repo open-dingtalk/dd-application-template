@@ -1,3 +1,5 @@
 {
-    "type": "plugin"
+    "type": "plugin",
+    "miniAppId": "5000000000464775",
+    "apiToken": "8137ba6855fa325292e1d053b21015cc"
 }
