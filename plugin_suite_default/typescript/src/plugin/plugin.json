@@ -1,0 +1,8 @@
+{
+  "publicComponents": {
+    "pc": "./components/runtime/pc/index",
+    "mobile": "./components/runtime/mobile/index",
+    "setter": "./components/designer/setter/CustomSetter/index"
+  },
+  "main": "./index.js"
+}

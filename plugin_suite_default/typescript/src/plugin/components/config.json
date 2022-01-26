@@ -1,0 +1,63 @@
+{
+  "name": "请假套件-advanced",
+  "category": "suite_test",
+  "description": "请假套件demo版，看完就学会了套件开发",
+  "icon": "https://static.dingtalk.com/media/lALOB0o7K8yQzJA_144_144.png",
+  "appId": "",
+  "bizType": "com.example.leave",
+  "props": {},
+  "setters": [],
+  "children": [
+    {
+      "componentName": "SelectField",
+      "bizAlias": "leaveType",
+      "props": {
+        "placeholder": "请选择",
+        "label": "请假类型",
+        "required": true,
+        "options": [
+          {
+            "key": "option_1",
+            "value": "病假"
+          },
+          {
+            "key": "option_2",
+            "value": "事假"
+          }
+        ]
+      }
+    },
+    {
+      "componentName": "DateField",
+      "bizAlias": "leaveStartTime",
+      "props": {
+        "placeholder": "请选择",
+        "label": "开始时间",
+        "required": true,
+        "format": "yyyy-MM-dd",
+        "unit": "天"
+      }
+    },
+    {
+      "componentName": "DateField",
+      "bizAlias": "leaveEndTime",
+      "props": {
+        "placeholder": "请选择",
+        "label": "结束时间",
+        "required": true,
+        "format": "yyyy-MM-dd",
+        "unit": "天"
+      }
+    },
+    {
+      "componentName": "leaveReason",
+      "bizAlias": "leaveReason",
+      "props": {
+        "placeholder": "请填写请假理由",
+        "label": "请假理由",
+        "showTextcount": true
+      },
+      "type": "custom"
+    }
+  ]
+}
