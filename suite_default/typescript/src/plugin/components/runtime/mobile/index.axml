@@ -1,0 +1,10 @@
+<view class="mobile">
+    <block a:for="{{fields}}">
+        <block a:if="{{item.bizAlias == 'leaveReason'}}">
+            <leave-reason />
+        </block>
+        <block a:else>
+            <slot name="{{item.bizAlias}}" />
+        </block>
+    </block>
+</view>

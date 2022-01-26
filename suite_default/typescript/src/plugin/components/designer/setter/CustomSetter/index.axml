@@ -1,0 +1,7 @@
+<!-- 注册umi组件 -->
+<view class="setter">
+    <view class="foo" onTap="onClick">setter: {{count}}</view>
+    setter name: {{name}}
+    setter age: {{age}}
+    {{leavename}}
+</view>
