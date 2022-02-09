@@ -1,0 +1,30 @@
+.index {
+  padding-top: 50px;
+}
+.card {
+  width: 320px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  font-family: PingFangSC-Semibold;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin: 20px auto 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.reserve {
+  background-image: linear-gradient(180deg, #FFCE67 2%, #F56621 100%);
+}
+.myReserve {
+  background-image: linear-gradient(180deg, #5BE28B 2%, #245F4F 100%);
+}
+.manage {
+  background-image: linear-gradient(180deg, #67F4FF 2%, #4121F5 100%);
+}
+a {
+  text-decoration: none;
+}
+* {
+  user-select: none;
+}

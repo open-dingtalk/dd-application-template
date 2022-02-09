@@ -1,0 +1,18 @@
+.manage-page {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.meetingItem {
+  margin-bottom: 12px;
+}
+
+.addMeeting {
+  margin: 12px 40px;
+}
+
+.manage-page .dtm-list-extra {
+  display: flex;
+}

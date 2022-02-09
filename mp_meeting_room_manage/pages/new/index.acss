@@ -1,0 +1,6 @@
+.manage-bottom {
+  position: fixed;
+  bottom: 20rpx;
+  padding: 24rpx 80rpx;
+  width: calc(100% - 160rpx);
+}

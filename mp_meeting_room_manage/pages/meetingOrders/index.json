@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "会议室预定",
+  "usingComponents": {
+    "timeline": "../../components/timeline/index"
+  }
+}

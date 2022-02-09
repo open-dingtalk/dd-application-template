@@ -1,0 +1,24 @@
+{
+  "modes": [
+    {
+      "title": "manage",
+      "page": "pages/manage/index"
+    },
+    {
+      "title": "new",
+      "page": "pages/new/index"
+    },
+    {
+      "title": "my-order",
+      "page": "pages/myOrder/index"
+    },
+    {
+      "title": "meetingOrders",
+      "page": "pages/meetingOrders/index"
+    },
+    {
+      "title": "meetingOrder",
+      "page": "pages/meetingOrder/index"
+    }
+  ]
+}

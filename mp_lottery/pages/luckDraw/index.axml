@@ -1,0 +1,21 @@
+<view class="page-luckDraw">
+  <view class="content">
+    <view class="title">{{lotteryInfo.title}}</view>
+    <view class="jackpot">
+      <view class="card-max" a:for="{{prizes}}">
+        <view class="jackpot-text">{{item.title}} * {{item.totalCount}}</view>
+      </view>
+    </view>
+
+    <view class="buttons">
+      <button type="primary" onTap="onDraw">立即抽奖（剩余{{leftDrawCount}}次机会）</button>
+      <button type="default" onTap="toIndex">我的抽奖</button>
+    </view>
+    
+    <view class="rule">
+        <view>抽奖规则：</view>
+        <view>{{lotteryInfo.rule_desc}}</view>
+    </view>
+  </view>
+
+</view>

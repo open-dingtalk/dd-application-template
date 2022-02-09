@@ -1,0 +1,32 @@
+<view class="manage">
+  <view a:if="{{!meetings.length}}" class="empty">暂无会议室</view>
+  <view a:for="{{meetings}}">
+    <list>
+      <list-item
+        key="item-{{item.id}}"
+        title="{{item.name}}"
+        lowerSubtitle="{{`${item.num}人｜${item.address}`}}"
+      >
+        {{item.name}}
+        <view slot="extra">
+          <button data-id={{item.id}} slot="extra" type="primary" shape="capsule" onTap="handleEdit">编辑</button>
+          <button data-id={{item.id}} slot="extra" type="warn" shape="capsule" onTap="handleDelete">删除</button>
+        </view>
+      </list-item>
+    </list>
+  </view>
+  <view class="manage-bottom">
+    <button size="middle" type="primary" onTap="handleAdd">新增会议室</button>
+  </view>
+  <modal
+		show="{{modalOpened}}"
+    showClose="{{false}}"
+    onModalClick="onModalClick"
+    onModalClose="onModalClose"
+    onButtonClick="onButtonClick"
+    buttons="{{buttons}}"
+	>
+		<view slot="header">{{`是否确认删除会议室`}}</view>
+		删除后不可恢复
+	</modal>
+</view>

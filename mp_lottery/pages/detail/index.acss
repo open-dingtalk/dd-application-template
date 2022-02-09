@@ -1,0 +1,78 @@
+page {
+  background-color: #f6f6f6;
+}
+.page-detail {
+  background-color: #f6f6f6;
+  padding-top: 2rpx;
+}
+/* 板块内容 */
+.card-title {
+  padding: 32rpx 32rpx 16rpx;
+  font-size: 14px;
+  color: rgba(25,31,37,0.40);
+  letter-spacing: -0.09px;
+  line-height: 18px;
+}
+.card {
+  margin-bottom: 8rpx;
+}
+.card-max {
+  margin-bottom: 12rpx;
+}
+.card-item {
+  background-color: #fff;
+  padding-left: 32rpx;
+}
+.card-item-content {
+  border-bottom: 2rpx solid rgba(25,31,37,0.08);
+  padding-right: 32rpx;
+}
+.card-item-label, .card-item-value {
+  font-size: 17px;
+  color: #191F25;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  padding-top: 26rpx;
+  padding-bottom: 26rpx;
+}
+.card-item-label {
+  width: 246rpx;
+  display: inline-block;
+}
+
+/* 邀请按钮 */
+.invite-btn {
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #3296FA;
+  letter-spacing: -0.82rpx;
+  background-color: #fff;
+  border-top: none;
+}
+
+/* 底部按钮 */
+.bottom-button {
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  background-color: #fff;
+  border-top: 2rpx solid rgba(25,31,37,0.12);
+  margin-top: 76rpx;
+}
+.bottom-button button {
+  display: inline-block;
+  width: 336rpx;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.multi-liner {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 246rpx);
+  box-sizing: border-box;
+  background-color: transparent;
+  vertical-align: top;
+  padding: 24rpx 24rpx 24rpx 0;
+}

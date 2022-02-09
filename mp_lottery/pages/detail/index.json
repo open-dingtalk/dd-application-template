@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "抽奖详情",
+    "usingComponents": {
+      "multi-liner": "mini-ali-ui/es/multi-liner/index"
+    }
+}

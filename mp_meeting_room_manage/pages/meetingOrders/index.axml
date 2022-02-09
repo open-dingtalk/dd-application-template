@@ -1,0 +1,11 @@
+<view>
+  <view a:for="{{meetings}}" class="meetings" onTap="goOrder">
+    <view class="name">
+      {{item.name}}
+    </view>
+    <view class="num">
+      {{`${item.num}人｜${item.address}`}}
+    </view>
+    <timeline item="{{item}}"/>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.index {
+  display: block;
+  margin: auto;
+  padding-top: 100rpx;
+  width: 640rpx;
+  height: 300rpx;
+  text-align: center;
+  line-height: 300rpx;
+  font-family: PingFangSC-Semibold;
+  font-size: 40rpx;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.reserve {
+  margin: 40rpx auto;
+  border-radius: 20rpx;
+  background-image: linear-gradient(180deg, #FFCE67 2%, #F56621 100%);
+}
+.myReserve {
+  margin: 40rpx auto;
+  border-radius: 20rpx;
+  background-image: linear-gradient(180deg, #5BE28B 2%, #245F4F 100%);
+}
+.manage {
+  margin: 40rpx auto;
+  border-radius: 20rpx;
+  background-image: linear-gradient(180deg, #67F4FF 2%, #4121F5 100%);
+}

@@ -1,0 +1,93 @@
+/* index.acss */
+.page-index {
+  background-color: #f6f6f6;
+}
+/* 头部tab样式 */
+.header {
+  width: 100%;
+  height: 96rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-bottom: 2rpx solid #e6e7e7;
+  border-top: 2rpx solid #f6f6f6;
+}
+.header-item {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: -2rpx;
+  width: 50%;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgba(25,31,37,0.40);
+  letter-spacing: -0.48rpx;
+  border-bottom: 4rpx solid transparent;
+}
+.header-item.active {
+  color: #3296FA;
+  border-bottom: 4rpx solid #3296FA;
+}
+
+/* 列表样式 */
+.scroll-view {
+  height: calc(100vh - 96rpx);
+}
+.scroll-view-initiator {
+  height: calc(100vh - 304rpx);
+}
+.list-box {
+  padding-top: 10rpx;
+}
+.list-content {
+  background-color: #fff;
+  padding: 32rpx 24rpx 40rpx 32rpx;
+}
+.list-content-top, .list-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-content-top {
+  margin-bottom: 20rpx;
+}
+.list-content-title {
+  font-size: 36rpx;
+  color: #181818;
+}
+.list-content-text, .list-content-time {
+  font-size: 28rpx;
+  color: #5a5a5a;
+}
+.list-content-prizesbox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.list-content-prizesbox .list-content-text {
+  margin-top: 8rpx;
+}
+.empty {
+  width: 100%;
+  text-align: center;
+  padding-top: 50%;
+  font-size: 32rpx;
+  color: rgba(25,31,37,0.28);
+}
+.primary {
+  font-size: 28rpx;
+  color: #3296FA;
+}
+
+/* 底部按钮 */
+.bottom-button {
+  padding-top: 60rpx;
+  padding-bottom: 60rpx;
+}
+.bottom-button button {
+  width: 576rpx;
+  margin: 0 auto;
+}

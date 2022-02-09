@@ -1,0 +1,17 @@
+.empty {
+  color: #333333;
+  margin: 100rpx auto;
+  text-align: center;
+}
+.am-list-extra button {
+  margin-left: 20rpx;
+}
+.manage-bottom {
+  position: fixed;
+  bottom: 20rpx;
+  padding: 24rpx 80rpx;
+  width: calc(100% - 160rpx);
+}
+.delete-button {
+  color: red;
+}

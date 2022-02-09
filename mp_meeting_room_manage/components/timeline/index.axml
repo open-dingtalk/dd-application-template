@@ -1,0 +1,23 @@
+<view>
+  <view class="timeline">
+    <view a:for="{{arr_leng_26}}" class="slots" a:for-item="arr">
+      <view class="slot
+        {{index === 0 ? 'first' : ''}}
+        {{index === 25 ? 'last' : ''}}
+        {{arr.disabled ? 'disabled' : ''}}
+        {{arr.selected ? 'selected' : ''}}
+      "></view>
+    </view>
+  </view>
+  <view class="label">
+    <view a:for="{{arr_leng_26}}" class="slot
+        {{index === 0 ? 'first' : ''}}
+        {{index === 25 ? 'last' : ''}}
+        {{arr.disabled ? 'disabled' : ''}}
+        {{arr.selected ? 'selected' : ''}}
+    ">
+      {{index % 2 === 0 ? index / 2 + 10 : ''}}
+      {{index === 25 ? 23 : ''}}
+    </view>
+  </view>
+</view>
