@@ -1,0 +1,37 @@
+<view>
+  <list>
+    <view slot="header">
+      会议室信息
+    </view>
+    <input-item data-field="name" 
+      placeholder="请输入会议室名称" 
+      type="text" 
+      value="{{name}}" 
+      clear="{{true}}" 
+      onInput="onNameInput" 
+      onClear="onClear">
+      名称
+    </input-item>
+    <input-item data-field="num" 
+      placeholder="请输入数字" 
+      type="number" 
+      value="{{num}}" 
+      clear="{{true}}" 
+      onInput="onNumInput" 
+      onClear="onClear">
+      人数
+    </input-item>
+    <input-item data-field="address" 
+      placeholder="请输入会议室地址" 
+      type="text" 
+      value="{{address}}" 
+      clear="{{true}}" 
+      onInput="onAddressInput" 
+      onClear="onClear">
+      地址
+    </input-item>
+  </list>
+  <view class="manage-bottom">
+    <button size="middle" type="primary" onTap="handleConfirm">确认</button>
+  </view>
+</view>

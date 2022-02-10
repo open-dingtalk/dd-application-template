@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/manage/index",
+    "pages/meetingOrders/index",
+    "pages/myOrder/index",
+    "pages/edit/index",
+    "pages/new/index",
+    "pages/meetingOrder/index"
+  ],
+  "window": {
+    "defaultTitle": "会议室预定"
+  }
+}

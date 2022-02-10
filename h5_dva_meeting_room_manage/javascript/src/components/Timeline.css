@@ -1,0 +1,51 @@
+.timeline {
+  height: 56px;
+  margin-top: -16px;
+  display: flex;
+  z-index: 1;
+  position: relative;
+  padding: 0 1.92307%;
+}
+.timeline .slots {
+	padding-top: 14px;
+	padding-bottom: 20px;
+	flex: 1;
+	height: 100%;
+	box-sizing: border-box;
+}
+.timeline .slot {
+	height: 100%;
+	border: 1px solid rgba(36,56,88,.1);
+	user-select: none;
+}
+.timeline .slot.disabled {
+	background-color: rgba(151,174,204,.2);
+}
+.timeline .slot.selected {
+	background-color: rgba(255,111,0,.3);
+}
+.timeline .slot.first {
+	border-radius: 4px 0 0 4px;
+}
+.timeline .slot:not(.last) {
+	border-right: none;
+}
+.label {
+  margin-top: -14px;
+  display: flex;
+  color: #79889b;
+  padding: 0 1.92307%;
+  transform: translateX(-1.92307%);
+}
+.label .slot {
+	flex: 1;
+	text-align: center;
+}
+.label .slot.first {
+	text-align: left;
+	transform: translateX(50%);
+}
+.label .slot.last {
+	text-align: right;
+	transform: translateX(50%);
+}

@@ -1,0 +1,85 @@
+<!-- index.axml -->
+<view class="page-detail">
+  <view class="card">
+    <view class="card-title">抽奖信息</view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">抽奖标题</text>
+        <input class="card-item-input" disabled="{{id}}" maxlength="12" value={{lotteryInfo.title}} controlled={{true}} onInput="changeLotteryInfo" data-type="title" placeholder="最多填写12个文字" />    
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">开始时间</text>
+        <view class="card-item-value card-item-block" onTap="datePicker" data-type="startTime">
+          <text>{{lotteryInfo.startTime}}</text>
+          <am-icon type="right" size="20" />
+        </view>
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">结束时间</text>
+        <view class="card-item-value card-item-block" onTap="datePicker" data-type="endTime">
+          <text>{{lotteryInfo.endTime}}</text>
+          <am-icon type="right" size="20" />
+        </view>
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">每人抽奖次数</text>
+        <input class="card-item-input" maxlength="12" type="number" placeholder="请填写整数" value={{lotteryInfo.lotTimes}} controlled={{true}} onInput="changeLotteryInfo" data-type="lotTimes" />
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖后移出</text>
+        <text class="card-item-value" data-type="winningOnce" onTap='selectIsRemove'>{{selectData[lotteryInfo.winningOnce] || "请选择"}}</text>        
+      </view>
+    </view>
+
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">规则说明</text>
+        <multi-liner
+          class="multi-liner"
+          placeholder="请填写抽奖规则" 
+          auto-height="{{true}}"
+          value={{lotteryInfo.ruleDesc}}
+          controlled={{true}}
+          onInput="changeLotteryInfo"
+          data-type="ruleDesc"
+        />
+      </view>
+    </view>
+  </view>
+
+  <view class="card-max" a:for="{{prizes}}">
+    <view class="card-title" a:if="{{!index}}">奖品配置</view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">奖品名称</text>
+        <input class="card-item-input" placeholder="请填写奖品名称" disabled="{{!item.noDisabled}}" value={{item.title}} controlled={{true}} onInput="changePrizes" data-index="{{index}}" data-type="title" />
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">奖品数量</text>
+        <input class="card-item-input" maxlength="12" type="number" placeholder="请填写奖品数量" value={{item.totalCount}} controlled={{true}} onInput="changePrizes" data-index="{{index}}" data-type="totalCount" />
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖率</text>
+        <input class="card-item-input" maxlength="12" type="digit" placeholder="中奖率为1时必中奖" value={{item.probability}} controlled={{true}} onInput="changePrizes" data-index="{{index}}" data-type="probability" />
+      </view>
+    </view>
+  </view>
+  <button class="invite-btn" onTap="addItem">添加一项</button>
+
+
+  <view class="bottom-button">
+    <button type="primary" onTap="onSave">{{id ? "保存" : "完成"}}</button>
+  </view>
+</view>

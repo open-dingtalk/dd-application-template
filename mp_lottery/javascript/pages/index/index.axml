@@ -1,0 +1,32 @@
+<!-- page/index/index.axml -->
+<view class="page-index">
+  <!-- 头部tab -->
+  <view class="header">
+    <view class="{{tabkey == index ? 'header-item active' : 'header-item'}}" a:for="{{tab}}" data-key="{{index}}" onTap="changeTabKey">
+      <text class="header-text">{{item}}</text>
+    </view>
+  </view>
+  <!-- 底部内容 -->
+  <scroll-view class="{{tabkey ? 'scroll-view-initiator' : 'scroll-view'}}" scroll-y={{true}}>
+    <view class="empty" a:if="{{!list.length}}">
+      暂无数据
+    </view>
+    <view class="list-box" a:for="{{list}}" key="{{item._id}}" data-id="{{item._id}}" onTap="toDetail">
+      <view class="list-content">
+        <view class="list-content-top">
+          <text class="list-content-title">{{item.title}}</text>
+          <text class="{{item.isWinnig ? 'list-content-text primary' : 'list-content-text'}}" a:if="{{!tabkey}}">{{item.isWinnig ? '已中奖' : '未中奖'}}</text>
+        </view>
+        <view class="list-content-bottom">
+          <view a:if="{{!tabkey}}" class="list-content-prizesbox">
+            <text class="list-content-text" a:for="{{item.prizes}}" a:for-index="prizesIndex" a:for-item="prizes">{{prizes.title}}*{{prizes.count}}</text>
+          </view>
+          <text class="list-content-time">{{item.winTime}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="bottom-button" a:if="{{tabkey}}">
+    <button type="primary" onTap="toForm">发起抽奖</button>
+  </view>
+</view>

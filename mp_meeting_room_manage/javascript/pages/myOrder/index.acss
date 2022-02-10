@@ -1,0 +1,60 @@
+page {
+  background-color: rgb(237, 237, 238);
+}
+.my-order {
+  padding-top: 5rpx;
+}
+
+.list-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30rpx 30rpx;
+  margin: 30rpx 0;
+}
+
+.list-left {
+  width: 580rpx;
+}
+
+.list-right {
+  display: inline-block;
+}
+
+.list-right > button {
+  padding: 2rpx 20rpx;
+}
+
+.am-button-warn {
+  font-size: 24rpx;
+  height: 56rpx;
+}
+
+.am-button-content {
+  line-height: 56rpx;
+}
+
+.name {
+  font-size: 36rpx;
+  padding-bottom: 10rpx;
+}
+
+.num {
+  font-size: 28rpx;
+  padding-bottom: 40rpx;
+}
+
+.range {
+  font-size: 28rpx;
+}
+
+.delete-button {
+  color: red;
+}
+
+.empty {
+  color: #333333;
+  margin: 100rpx auto;
+  text-align: center;
+}

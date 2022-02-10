@@ -1,0 +1,52 @@
+<view class="page-result">
+  <view class="card">
+    <view class="card-title">抽奖数据</view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">抽奖人数</text>
+        <text class="card-item-value">{{userCount}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">抽奖人次</text>
+        <text class="card-item-value">{{lotteryCount}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖人数</text>
+        <text class="card-item-value">{{winningUserCount}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖人次</text>
+        <text class="card-item-value">{{winnignCount}}</text>        
+      </view>
+    </view>
+  </view>
+
+  <view class="card-max">
+    <view class="card-title">中奖信息</view>
+    <view class="list-box" a:for="{{records}}" key="{{item.userId}}" data-id="{{item.userId}}" onTap="toDetail">
+      <view class="list-content">
+        <view class="list-content-top">
+          <text class="list-content-title">{{item.name}}</text>
+          <text class="{{item.isWinnig ? 'list-content-text primary' : 'list-content-text'}}">{{item.isWinnig
+ ? '已中奖' : '未中奖'}}</text>
+        </view>
+        <view class="list-content-bottom">
+          <text class="list-content-text">{{item.department}}</text>
+          <text class="list-content-time">{{item.time}}</text>
+        </view>
+        <view class="list-content-bottom">
+          <view class="list-content-prizesbox">
+            <text class="list-content-text" a:for="{{item.prizes}}" a:for-item="pri">{{pri.title}} * {{pri.count}}</text>
+          </view>
+          <view></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

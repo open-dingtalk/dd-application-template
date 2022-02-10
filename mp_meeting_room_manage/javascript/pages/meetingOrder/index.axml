@@ -1,0 +1,39 @@
+<view>
+  <view class="top">
+    <view class="meeting">
+      <view class="name">
+        {{room.name}}
+      </view>
+      <view class="num">
+        {{`${room.num}人｜${room.address}`}}
+      </view>
+    </view>
+    <view class="meeting row">
+      <view class="calender-date" onTap="datePicker" data-type="reserverTime">
+        <text>{{reverveDate}}</text>
+      </view>
+      <view class="switch-show">
+        <view class="hint">只显示可预定时段</view>
+        <am-switch checked onChange="switchChange"/>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y="{{true}}" class="content">
+    <list>
+      <view a:for="{{times}}">
+        <list-item
+          onClick="onItemClick"
+          data-value="{{item.value}}"
+        >
+          {{item.content}}
+          <view slot="extra">
+            <am-checkbox ctrlChecked="{{true}}" value="{{item.value}}" disabled="{{item.disabled}}" checked="{{item.checked}}" />
+          </view>
+        </list-item>
+      </view>
+    </list>
+  </scroll-view>
+  <view class="manage-bottom">
+    <button size="middle" type="primary" onTap="onOrder">立即预定</button>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+page {
+  background-color: #f6f6f6;
+}
+.page-result {
+  background-color: #f6f6f6;
+  padding-top: 2rpx;
+}
+/* 板块内容 */
+.card-title {
+  padding: 32rpx 32rpx 16rpx;
+  font-size: 14px;
+  color: rgba(25,31,37,0.40);
+  letter-spacing: -0.09px;
+  line-height: 18px;
+}
+.card {
+  margin-bottom: 8rpx;
+}
+.card-max {
+  margin-bottom: 12rpx;
+}
+.card-item {
+  background-color: #fff;
+  padding-left: 32rpx;
+}
+.card-item-content {
+  border-bottom: 2rpx solid rgba(25,31,37,0.08);
+  padding-right: 32rpx;
+}
+.card-item-label, .card-item-value {
+  font-size: 17px;
+  color: #191F25;
+  letter-spacing: -0.41px;
+  line-height: 22px;
+  padding-top: 26rpx;
+  padding-bottom: 26rpx;
+}
+.card-item-label {
+  width: 246rpx;
+  display: inline-block;
+}
+
+
+.list-box {
+  padding-top: 10rpx;
+}
+.list-content {
+  background-color: #fff;
+  padding: 32rpx 24rpx 40rpx 32rpx;
+}
+.list-content-top, .list-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-content-prizesbox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.list-content-prizesbox .list-content-text {
+  margin-top: 8rpx;
+}
+.list-content-top {
+  margin-bottom: 20rpx;
+}
+.list-content-title {
+  font-size: 36rpx;
+  color: #181818;
+}
+.list-content-text, .list-content-time {
+  font-size: 28rpx;
+  color: #5a5a5a;
+}
+.primary {
+  font-size: 28rpx;
+  color: #3296FA;
+}

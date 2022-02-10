@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "会议室预定",
+  "usingComponents":{
+    "list": "mini-ali-ui/es/list/index",
+    "list-item": "mini-ali-ui/es/list/list-item/index",
+    "am-switch": "mini-ali-ui/es/am-switch/index",
+    "am-checkbox": "mini-ali-ui/es/am-checkbox/index"
+  }
+}

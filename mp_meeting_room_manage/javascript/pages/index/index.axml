@@ -1,0 +1,5 @@
+<view class="index">
+  <view class="reserve" onTap="toReserve">会议室预定</view>
+  <view class="myReserve" onTap="toMyReserve">我的预定</view>
+  <view class="manage" onTap="toManage">会议室管理</view>
+</view>

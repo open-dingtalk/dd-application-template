@@ -1,0 +1,26 @@
+<view class="my-order">
+  <view a:if="{{!meetings.length}}" class="empty">暂无预定</view>
+  <view a:for="{{meetings}}">
+    <view class="list-container">
+      <view class="list-left">
+        <view class="name">{{item.room.name}}</view>
+        <view class="num">{{`${item.room.num}人｜${item.room.address}`}}</view>
+        <view class="range">{{item.room.range}}</view>
+      </view>
+      <view class="list-right">
+        <button size="small" type="warn" onTap="handleCancel" data-id="{{item.room.id}}">取消预定</button>
+      </view>
+    </view>
+  </view>
+  <modal
+		show="{{modalOpened}}"
+    showClose="{{false}}"
+    onModalClick="onModalClick"
+    onModalClose="onModalClose"
+    onButtonClick="onButtonClick"
+    buttons="{{buttons}}"
+	>
+		<view slot="header">{{`是否确认取消预定`}}</view>
+		取消预定后会议室将被释放
+	</modal>
+</view>

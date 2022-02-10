@@ -1,0 +1,59 @@
+page {
+  background-color: #EDEDEE;
+}
+.top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #EDEDEE;
+}
+.meeting {
+  padding: 20rpx;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.name {
+  padding-bottom: 10rpx;
+}
+.num {
+  font-size: 30rpx;
+  padding-bottom: 10rpx;
+  color: #999999;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.calender-date {
+  display: inline-block;
+  padding: 15rpx;
+  border: 2rpx solid rgba(36,56,88,.1);
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.switch-show {
+  display: inline-block;
+  color: #999999;
+  height: 60rpx;
+}
+.content {
+  margin-top: 308rpx;
+}
+.hint {
+  display: inline;
+  line-height: 60rpx;
+  vertical-align: middle;
+}
+.am-switch {
+  padding: 15rpx;
+}
+.manage-bottom {
+  position: fixed;
+  bottom: 0;
+  padding: 50rpx 80rpx;
+  width: calc(100% - 160rpx);
+  background-color: #ffffff;
+  z-index: 10;
+}

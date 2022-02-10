@@ -1,0 +1,18 @@
+page {
+  background-color: #EDEDEE;
+}
+.meetings {
+  padding: 30rpx 30rpx 30rpx;
+  font-size: 34rpx;
+  color: #333333;
+  border-bottom: 2rpx solid rgba(36,56,88,.1);
+  background-color: #ffffff;
+}
+.name {
+  padding-bottom: 10rpx;
+}
+.num {
+  font-size: 30rpx;
+  padding-bottom: 40rpx;
+  color: #999999;
+}

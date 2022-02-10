@@ -1,0 +1,73 @@
+<view class="page-detail">
+  <view class="card">
+    <view class="card-title">抽奖信息</view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">抽奖标题</text>
+        <text class="card-item-value">{{lottery.title}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">开始时间</text>
+        <text class="card-item-value">{{lottery.start_time}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">结束时间</text>
+        <text class="card-item-value">{{lottery.end_time}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">每人抽奖次数</text>
+        <text class="card-item-value">{{lottery.lot_times}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖后移出</text>
+        <text class="card-item-value">{{selectData[lottery.winning_once]}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">规则说明</text>
+        <view
+          class="multi-liner"
+        >{{lottery.rule_desc}}</view>
+      </view>
+    </view>
+
+    <!-- 邀请抽奖用户 -->
+    <button class="invite-btn" open-type="share" a:if="{{canIUseShareButton}}">邀请抽奖用户</button>
+  </view>
+
+  <view class="card-max" a:for="{{prizes}}">
+    <view class="card-title" a:if="{{!index}}">奖品配置</view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">奖品名称</text>
+        <text class="card-item-value">{{item.title}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">奖品数量</text>
+        <text class="card-item-value">{{item.totalCount}}</text>        
+      </view>
+    </view>
+    <view class="card-item">
+      <view class="card-item-content">
+        <text class="card-item-label">中奖率</text>
+        <text class="card-item-value">{{item.probability}}</text>        
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-button">
+    <button data-id="{{id}}" type="default" onTap="toForm">编辑</button>
+    <button data-id="{{id}}" type="primary" onTap="toResult">抽奖结果</button>
+  </view>
+</view>

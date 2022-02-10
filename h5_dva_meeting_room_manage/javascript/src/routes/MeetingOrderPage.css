@@ -1,0 +1,26 @@
+.meetingOrder {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.orderBtn {
+	margin: 12px 40px;
+}
+.listItem {
+	margin-bottom: 12px;
+}
+
+.dtm-list-item.timepicker .dtm-button {
+	width: 100px;
+}
+
+.timepicker-hint {
+	margin-right: 10px;
+}
+
+.meetingOrder .dtm-list-body {
+	height: calc(100vh - 200px);
+	overflow-y: scroll;
+}
