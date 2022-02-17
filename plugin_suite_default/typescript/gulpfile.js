@@ -115,9 +115,10 @@ async function copyConfigFiles(cb) {
   cb();
 }
 
-function writeConfigFile(plugin, type, data) {
+async function writeConfigFile(plugin, type, data) {
   let pt = plugin.publicComponents[type].slice(1, -6);
   data.pluginComponentName = type;
+  await fse.outputJson(`${distPath}/plugin/${pt}/pc.config.json`, data); 
   return fse.outputJson(`${distPath}/plugin/${pt}/config.json`, data);
 }
 
