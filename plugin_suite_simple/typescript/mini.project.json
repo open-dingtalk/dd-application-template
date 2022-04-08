@@ -1,0 +1,19 @@
+{
+	"miniprogramRoot": "dist/miniprogram",
+	"pluginRoot": "dist/plugin",
+	"compileType": "plugin",
+	"component2": true,
+	"exclude": [
+		"node_modules/typescript",
+		"node_modules/eslint",
+		"node_modules/jest",
+		"node_modules/gulp",
+		"node_modules/ts-jest",
+		"node_modules/ts-loader",
+		"node_modules/yargs",
+		"node_modules/copy-webpack-plugin",
+		"node_modules/cz-conventional-changelog",
+		"node_modules/@typescript-eslint/eslint-plugin",
+		"node_modules/@typescript-eslint/parser"
+	]
+}

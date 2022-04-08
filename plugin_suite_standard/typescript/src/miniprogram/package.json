@@ -1,0 +1,23 @@
+{
+    "name": "open-components",
+    "version": "0.0.1",
+    "description": "套件库",
+    "main": "app.js",
+    "scripts": {
+        "test": "node ./scripts/index.js -d ../plugin/components"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+        "专属门户脚手架"
+    ],
+    "dependencies": {
+        "dingui-mini": "^1.0.1"
+    },
+    "author": {
+        "name": ""
+    },
+    "private": true
+}

@@ -1,0 +1,8 @@
+{
+  "generator-dd-application": {
+    "promptValues": {
+      "template": "plugin_suite_default",
+      "language": "typescript"
+    }
+  }
+}

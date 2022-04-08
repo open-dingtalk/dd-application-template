@@ -1,0 +1,44 @@
+{
+  "name": "worktab-plugin",
+  "version": "0.1.0",
+  "description": "worktab-plugin typescript",
+  "scripts": {
+    "test": "jest",
+    "prestart": "cd src/plugin && npm i",
+    "postinstall": "cd src/plugin && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-dingtalk/dd-application-template.git"
+  },
+  "keywords": [
+    "worktab-plugin",
+    "typescript"
+  ],
+  "author": "lou1swu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-dingtalk/dd-application-template/issues"
+  },
+  "homepage": "https://github.com/open-dingtalk/dd-application-template",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "copy-webpack-plugin": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "del": "^6.0.0",
+    "eslint": "^7.11.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "jest": "^26.6.0",
+    "ts-jest": "^26.4.1",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.0.3",
+    "yargs": "^16.2.0"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.0",
+    "dingtalk-jsapi": "^2.13.68",
+    "fs-extra": "^10.0.0"
+  }
+}

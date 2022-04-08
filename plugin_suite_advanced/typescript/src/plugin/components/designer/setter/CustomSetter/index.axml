@@ -1,0 +1,4 @@
+<view class="setter">
+  <div>是否展示请假理由</div>
+  <switch checked="{{checked}}" onChange="switchChange"/>
+</view>
