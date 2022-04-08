@@ -15,13 +15,13 @@ src/plugin 下执行 npm install
 
 参考自定义组件 leaveReason 开发流程
 
-## 配置后台申请创建插件(暂时忽略)
-https://open-dev.dingtalk.com/fe/old#/plugin
-
+## 配置后台申请创建插件
+https://open-dev.dingtalk.com/fe/pluginCenter#/
 ## ding cli 安装
-sudo npm install -g dingtalk-design-cli@0.20.3-beta.2
+sudo npm install -g dingtalk-design-cli@0.20.9-beta.10
 
 ## ding init
+选择插件，根据需要选择套件模板类型
 配置miniAppId、token  
 ding.config.json->  { miniAppId , token }  
 plugin.json-> { pluginId : miniAppId }  
@@ -32,15 +32,6 @@ plugin.json-> { pluginId : miniAppId }
 
 ## ding upload
 
-上传时移除根目录gulpfile.js中 223 行,移除setters、props校验
-改动点如下
-
-`setters: [],  
-props: {}`
-
 配置后台查看上传结果
-https://open-dev.dingtalk.com/fe/old#/plugin
+https://open-dev.dingtalk.com/fe/pluginCenter#/
 
-## 已知问题：
-setter暂时不测试，因为工作台校验问题；
-proxy，h5pro热更新有问题，每次改动都得重启cli，这个得再看下
