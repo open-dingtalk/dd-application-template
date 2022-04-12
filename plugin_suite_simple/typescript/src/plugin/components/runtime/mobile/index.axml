@@ -1,0 +1,5 @@
+<view class="mobile">
+  <block a:for="{{fields}}">
+    <slot name="{{item.bizAlias}}" />
+  </block>
+</view>

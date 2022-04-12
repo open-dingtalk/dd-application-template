@@ -1,0 +1,76 @@
+{
+  "name": "请假套件-standard",
+  "description": "请假套件demo版，看完就学会了套件开发",
+  "icon": "",
+  "bizType": "com.example.leave",
+  "templateType": "standard",
+  "props": { "hiddenReason": false },
+  "setters": [
+    {
+      "propName": "hiddenReason",
+      "setterName": "Switch",
+      "props": {
+        "label": "是否隐藏请假理由",
+        "defaultValue": false
+      }
+    }
+  ],
+  "children": [
+    {
+      "componentName": "SelectField",
+      "bizAlias": "leaveType",
+      "props": {
+        "placeholder": "请选择",
+        "label": "请假类型",
+        "required": true,
+        "options": [
+          { "key": "option_1", "value": "病假" },
+          { "key": "option_2", "value": "事假" }
+        ]
+      }
+    },
+    {
+      "componentName": "TextNote",
+      "bizAlias": "leaveLeft",
+      "props": {
+        "notPrint": "1"
+      }
+    },
+    {
+      "componentName": "DateField",
+      "bizAlias": "leaveStartTime",
+      "props": {
+        "placeholder": "请选择",
+        "label": "开始时间",
+        "required": true,
+        "format": "yyyy-MM-dd",
+        "unit": "天"
+      }
+    },
+    {
+      "componentName": "DateField",
+      "bizAlias": "leaveEndTime",
+      "props": {
+        "placeholder": "请选择",
+        "label": "结束时间",
+        "required": true,
+        "format": "yyyy-MM-dd",
+        "unit": "天"
+      }
+    },
+    {
+      "componentName": "TextField",
+      "bizAlias": "leaveHowLong",
+      "props": {
+        "disabled": true,
+        "hidden": true,
+        "label": "请假时长"
+      }
+    },
+    {
+      "componentName": "TextareaField",
+      "bizAlias": "leaveReason",
+      "props": { "placeholder": "请填写请假理由", "label": "请假理由" }
+    }
+  ]
+}

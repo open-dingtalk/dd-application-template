@@ -1,0 +1,7 @@
+{
+  "publicComponents": {
+    "pc": "./components/runtime/pc/index",
+    "mobile": "./components/runtime/mobile/index"
+  },
+  "main": "./index.js"
+}
