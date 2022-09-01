@@ -1,0 +1,8 @@
+{
+    "defaultTitle": "标准化组件开发DEMO",
+    "usingComponents": {
+      "public-component": "plugin://myPlugin/public-component",
+      "component-title-bar": "../component-title-bar/index",
+      "card-container": "../card-container/index"
+    }
+  }

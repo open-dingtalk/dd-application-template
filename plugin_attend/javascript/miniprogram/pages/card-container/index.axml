@@ -1,0 +1,17 @@
+<view class="card-container">
+  <view class="card-container-header">
+    <view class="card-container-header-title">
+      上班打卡成功
+    </view>
+    <view class="card-container-header-sub-title">
+      打卡时间 8:30(示例数据)
+    </view>
+  </view>
+  <view class="card-container-body">
+    <slot/>
+  </view>
+  <view class="card-container-footer">
+    <text class="card-container-footer-text">查看打卡结果</text>
+  </view>
+
+</view>

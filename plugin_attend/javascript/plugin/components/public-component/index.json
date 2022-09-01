@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card-template": "../card-template/index",
+    "tab-template": "../tab-template/index",
+    "component-template": "../component-template/index"
+  }
+}
