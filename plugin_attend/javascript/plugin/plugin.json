@@ -1,0 +1,7 @@
+{
+    "publicComponents": {
+      "public-component": "components/public-component/index"
+    },
+    "main": "index.js"
+  }
+  

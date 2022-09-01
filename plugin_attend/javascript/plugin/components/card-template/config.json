@@ -1,0 +1,27 @@
+{
+  "pluginComponentName": "插件中导出的组件英文名，例如 component-template",
+  "name": "组件模板",
+  "icon": "组件的icon地址",
+  "previewUrl": "组件的预览图CDN地址",
+  "previewHeight": 100,
+  "setters": [{
+    "propName": "marginBottom",
+    "setterName": "SliderSetter",
+    "props": {
+      "label": "下间距",
+      "min": 0,
+      "max": 32
+    }
+  },
+  {
+    "propName": "gateWayApi",
+    "setterName": "SelectApiSetter",
+    "props": {
+      "label": "数据来源"
+    }
+  }],
+  "props": {
+    "marginBottom": 0,
+    "gateWayApi": {}
+  }
+}

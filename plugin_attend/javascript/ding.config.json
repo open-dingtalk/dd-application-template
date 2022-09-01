@@ -1,0 +1,29 @@
+{
+  "type": "plugin",
+  "typescript": false,
+  "base": "./",
+  "outDir": "./",
+  "devConfig": {
+		"sdk": {
+			"miniAppId": "5000000000477928",
+			"version": "0.0.16"
+		},
+		"mock": {
+			"componentsData": {
+				"component-template" : {
+          "id": "",
+          "mode": "light",
+          "locale": "zh_CN",
+          "config": {
+            "corpId": "",
+            "bizType": "card"
+          },
+          "componentName": "component-template",
+          "componentProps": {
+						"scheduleType": "OnDuty"
+          }
+        }
+			}
+		}
+	}
+}

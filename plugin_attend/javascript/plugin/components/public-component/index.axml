@@ -1,0 +1,24 @@
+<view class="public-component">
+    <block a:if="{{bizType === 'card'}}">
+      <view class="render-card">
+        <card-template bizType="{{bizType}}" componentName="{{componentName}}" componentProps="{{componentProps}}" 
+          config="{{config}}" />
+      </view>
+    </block>
+
+    <!-- 卡片，例如统计卡片 -->
+    <block a:if="{{bizType === 'component'}}">
+      <view class="render-component">
+        <component-template bizType="{{bizType}}" componentName="{{componentName}}" componentProps="{{componentProps}}" 
+          config="{{config}}" />
+      </view>
+    </block>
+
+    <!-- Tab页，考勤第二个Tab-->
+    <block a:if="{{bizType === 'Tab'}}">
+      <view class="render-tab">
+        <component-template bizType="{{bizType}}" componentName="{{componentName}}" componentProps="{{componentProps}}" 
+          config="{{config}}" />
+      </view>
+    </block>
+</view>

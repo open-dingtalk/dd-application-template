@@ -1,0 +1,28 @@
+<view class="page-index" a:if="{{sdkReady}}">
+    <!-- 翻牌页 -->
+    <block a:if="{{componentsData.config.bizType === 'card'}}">
+      <view class="render-engine-card">
+        <card-container>
+          <public-component bizType="{{componentsData.config.bizType}}" componentName="{{componentsData.componentName}}" componentProps="{{componentsData.componentProps}}" 
+            config="{{componentsData.config}}" />
+        </card-container>
+      </view>
+    </block>
+    
+    <!-- 卡片，例如统计卡片 -->
+    <block a:if="{{componentsData.config.bizType === 'component'}}">
+      <view class="render-engine-component">
+        <component-title-bar/>
+        <public-component bizType="{{componentsData.config.bizType}}" componentName="{{componentsData.componentName}}" componentProps="{{componentsData.componentProps}}" 
+          config="{{componentsData.config}}" />
+      </view>
+    </block>
+    
+    <!-- Tab页，考勤第二个Tab-->
+    <block a:if="{{componentsData.config.bizType === 'Tab'}}">
+      <view class="render-engine-tab">
+        <public-component bizType="{{componentsData.config.bizType}}" componentName="{{componentsData.componentName}}" componentProps="{{componentsData.componentProps}}" 
+          config="{{componentsData.config}}" />
+      </view>
+    </block>
+</view>
