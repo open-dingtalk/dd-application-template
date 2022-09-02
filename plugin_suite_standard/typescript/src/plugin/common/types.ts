@@ -25,7 +25,12 @@ export interface SuitOpenApi {
   form: SuitOpenForm;
   spi: SuitOpenSpi;
   jsapi: SuitOpenJsapi;
+  util: SuiteOpenUtil;
 }
+
+export type ISuiteValidator = (
+  props: any,
+) => string | undefined | Promise<string | undefined>;
 
 export interface SuitOpenField {
   isViewMode: () => boolean;
@@ -43,7 +48,7 @@ export interface SuitOpenField {
   onValueChange: (fn: (value?: any) => void) => () => void;
 
   getExtendValue: () => any;
-  setExtendValue:  (extendValue: any, forceUpdate?: boolean) => void;
+  setExtendValue: (extendValue: any, forceUpdate?: boolean) => void;
   onExtendValueChange: (
     fn: (extendValue?: any) => void,
   ) => () => void;
@@ -51,7 +56,7 @@ export interface SuitOpenField {
   onPropChange: (fn: () => void) => () => void;
 }
 
-export interface SuitOpenComplexField extends SuitOpenField{
+export interface SuitOpenComplexField extends SuitOpenField {
   getFields: () => SuitOpenField[];
 }
 
@@ -66,11 +71,15 @@ export interface SuitOpenForm {
   hideField: (bizAlias: string, forceUpdate?: boolean) => void;
 
   getFieldValue: (bizAlias: string) => any;
+  getBizContext: () => {
+    corpId: string;
+    [key: string]: any;
+  };
   setFieldValue: (bizAlias: string, value: any, forceUpdate?: boolean) => void;
   onFieldValueChange: (bizAlias: string, fn: (value?: any) => void) => (() => void) | undefined;
 
   getFieldExtendValue: (bizAlias: string) => any;
-  setFieldExtendValue:  (bizAlias: string, extendValue: any, forceUpdate?: boolean) => void;
+  setFieldExtendValue: (bizAlias: string, extendValue: any, forceUpdate?: boolean) => void;
   onFieldExtendValueChange: (
     bizAlias: string,
     fn: (extendValue?: any) => void,
@@ -80,11 +89,13 @@ export interface SuitOpenForm {
   getFieldProp: (bizAlias: string, propName: string) => any;
   setFieldProp: (bizAlias: string, propName: string, propValue: any, forceUpdate?: boolean) => void;
   onFieldPropChange: (bizAlias: string, fn: () => void) => (() => void) | undefined;
-  
+
   getSuiteProps: () => IComponentProps;
   getSuiteProp: (propName: string) => any;
   setSuiteProp: (propName: string, value: any) => void;
   onSuitPropChange: (fn: () => void) => (() => void);
+  addSuiteValidator: (fn: ISuiteValidator) => void;
+  addFieldValidator: (bizAlias: string, fn: ISuiteValidator) => void;
 }
 
 export interface IFieldValue {
@@ -100,22 +111,31 @@ export interface SuitOpenSpi {
   refreshData: <T>(
     params: { bizAsyncData: IFieldValue[]; modifiedBizAlias: string[]; },
     mockData?: any,
-  ) => Promise<T> 
+  ) => Promise<T>
 }
 
 export interface SuitOpenJsapi {
   [propName: string]: any;
 }
 
-export interface SuitSetterField{
-  [propName: string]: any;
+export interface SuiteOpenUtil {
+  openSelectPage: (param: {
+    title?: string;
+    url: string;
+    data?: any;
+  }) => Promise<any>;
 }
 
 export interface SuitSetterApi {
-  getSuiteProps: () => any;
-  setSuiteProps: (props:SuitSetterField) => void;
-  getFieldProps: (bizAlias:string) => any;
-  setFieldProps: (bizAlias:string, props:any) => void;
-  getAllFieldProps: () => any;
-  setAllFieldProps: (children:any) => any;
+  getSuiteProps: () => IComponentProps;
+  setSuiteProps: (props: IComponentProps) => void;
+  getFieldProps: (bizAlias: string) => IComponentProps;
+  setFieldProps: (bizAlias: string, props: IComponentProps) => void;
+  getSuiteChildren: () => any;
+  setSuiteChildren: (children: any[]) => void;
+  getMicroAppStatus: (appId?: number) => number;
+  openMicroApp: (url: string, appId?: number) => number;
+  spi: {
+    getSuiteDesignData: <T>() => Promise<T>;
+  }
 }
