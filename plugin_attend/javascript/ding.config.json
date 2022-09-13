@@ -16,10 +16,12 @@
           "locale": "zh_CN",
           "config": {
             "corpId": "",
-            "bizType": "card"
+            "bizType": "card",
+            "mode": "light",
+            "locale": "zh_CN"
           },
           "componentName": "component-template",
-          "componentProps": {
+          "props": {
 						"scheduleType": "OnDuty"
           }
         }
