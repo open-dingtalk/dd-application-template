@@ -1,0 +1,19 @@
+{
+  "name": "h5_immersion_page_form",
+  "version": "0.1.0",
+  "description": "H5沉浸式页面表单模版",
+  "private": true,
+  "scripts": {
+    "start": "umi dev"
+  },
+  "devDependencies": {
+    "@types/react": "^16.14.28"
+  },
+  "dependencies": {
+    "dingtalk-design-mobile": "^2.0.0",
+    "dingtalk-jsapi": "^2.15.2",
+    "dingtalk-theme": "^6.0.1",
+    "react": "^16.14.0",
+    "umi": "^3.5.27"
+  }
+}
