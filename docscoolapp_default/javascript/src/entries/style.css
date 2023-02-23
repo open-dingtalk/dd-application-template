@@ -1,0 +1,28 @@
+body {
+  background: none;
+}
+.page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+.page > .header {
+  padding: 12px 16px;
+}
+
+.content {
+  padding: 0 16px 12px 16px;
+}
+
+
+.line {
+  margin-top: 1em;
+}
+
+.title {
+  padding: 0;
+}
