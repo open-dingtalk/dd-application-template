@@ -32,6 +32,10 @@ export type ISuiteValidator = (
   props: any,
 ) => string | undefined | Promise<string | undefined>;
 
+export interface ISuiteOpenTableRow {
+  getFieldByBizAlias: (bizAlias: string) => SuitOpenField;
+}
+
 export interface SuitOpenField {
   isViewMode: () => boolean;
   isInvisible: () => boolean;
@@ -42,6 +46,7 @@ export interface SuitOpenField {
   getProps: () => IComponentProps;
   getProp: (propName: string) => any;
   setProp: (propName: string, propValue: any, forceUpdate?: boolean) => void;
+  onPropChange: (fn: () => void) => () => void;
 
   getValue: () => any;
   setValue: (value: any, forceUpdate?: boolean) => void;
@@ -53,7 +58,10 @@ export interface SuitOpenField {
     fn: (extendValue?: any) => void,
   ) => () => void;
 
-  onPropChange: (fn: () => void) => () => void;
+  getRows: () => ISuiteOpenTableRow[];
+
+  addValidator: (fn: ISuiteValidator) => void;
+  getViewElement: () => HTMLElement | undefined;
 }
 
 export interface SuitOpenComplexField extends SuitOpenField {
@@ -137,5 +145,9 @@ export interface SuitSetterApi {
   openMicroApp: (url: string, appId?: number) => number;
   spi: {
     getSuiteDesignData: <T>() => Promise<T>;
-  }
+  },
+  getBizContext: () => {
+    corpId: string;
+    [key: string]: any;
+  };
 }
