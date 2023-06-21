@@ -21,6 +21,12 @@ export interface IComponentProps {
   onRowClick?: (index: number, actionType: string) => void;
 }
 
+export interface IFieldData<V = any, Ext = any> {
+  key: string;
+  value?: V;
+  extendValue?: Ext;
+}
+
 export interface SuitOpenApi {
   form: SuitOpenForm;
   spi: SuitOpenSpi;
@@ -40,9 +46,9 @@ export interface SuitOpenField {
   isViewMode: () => boolean;
   isInvisible: () => boolean;
   isHidden: () => boolean;
+
   show: (forceUpdate?: boolean) => void;
   hide: (forceUpdate?: boolean) => void;
-
   getProps: () => IComponentProps;
   getProp: (propName: string) => any;
   setProp: (propName: string, propValue: any, forceUpdate?: boolean) => void;
@@ -58,9 +64,13 @@ export interface SuitOpenField {
     fn: (extendValue?: any) => void,
   ) => () => void;
 
-  getRows: () => ISuiteOpenTableRow[];
-
   addValidator: (fn: ISuiteValidator) => void;
+
+  getRows: () => ISuiteOpenTableRow[];
+  addRow: (rowValue?: IFieldData[]) => void;
+  removeRow: (rowIndex: number) => void;
+  updateRow: (rowValue: IFieldData[], rowIndex: number) => void;
+
   getViewElement: () => HTMLElement | undefined;
 }
 
@@ -123,15 +133,32 @@ export interface SuitOpenSpi {
 }
 
 export interface SuitOpenJsapi {
+  openModal: (params: {
+    title: string;
+    url: string;
+    size?: 'mini' | 'middle' | 'large',
+  }) => Promise<{}>;
+  openSlidePanel: (params: {
+    title: string;
+    url: string;
+    onSuccess?: (data: any) => void;
+    onFail?: (data: any) => void;
+  }) => Promise<{}>;
+  openLink: (params: {
+    url: string;
+  }) => Promise<{}>;
   [propName: string]: any;
 }
 
 export interface SuiteOpenUtil {
+  setLocationHref: (href: string) => void;
   openSelectPage: (param: {
     title?: string;
     url: string;
     data?: any;
   }) => Promise<any>;
+  getUrlParam: (key: string) => string;
+  getHashParam: (key: string) => string;
 }
 
 export interface SuitSetterApi {
