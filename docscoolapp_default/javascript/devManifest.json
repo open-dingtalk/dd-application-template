@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "id": "dingdocs-12345678",
+    "name": "测试酷应用"
+  },
+  "workbook": {
+    "scriptService": {
+      "url": "http://localhost:3000/script.html"
+    },
+    "menus": [
+      {
+        "name": "启动",
+        "action": {
+          "type": "open-side-bar",
+          "url": "http://localhost:3000/sidebar.html"
+        }
+      }
+    ]
+  }
+}

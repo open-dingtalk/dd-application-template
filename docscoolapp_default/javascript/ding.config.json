@@ -1,0 +1,6 @@
+{
+  "type": "docscoolapp",
+  "typescript": false,
+  "base": "./",
+  "outDir": "./"
+}
