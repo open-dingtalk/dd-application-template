@@ -1,0 +1,3 @@
+<view class="page-index" a:if="{{sdkReady}}">
+  <isv-component componentName="{{componentsData['isv-component'].componentName}}" componentProps="{{componentsData['isv-component'].componentProps}}" config="{{componentsData['isv-component'].config}}"></isv-component>
+</view>

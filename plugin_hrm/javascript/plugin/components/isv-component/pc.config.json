@@ -1,0 +1,39 @@
+{
+  "pluginComponentName": "isv-component",
+  "name": "isv示例组件",
+  "icon": "",
+  "category": "custom",
+  "corpId": "服务商企业的corpId",
+  "previewUrl": "组件的预览图CDN地址",
+  "previewHeight": 100,
+  "setters": [{
+    "propName": "marginBottom",
+    "setterName": "SliderSetter",
+    "props": {
+      "label": "下间距",
+      "min": 0,
+      "max": 32
+    }
+  },
+  {
+    "propName": "gateWayApi",
+    "setterName": "SelectApiSetter",
+    "props": {
+      "label": "数据来源"
+    }
+  }],
+  "props": {
+    "marginBottom": 16,
+    "gateWayApi": {},
+    "dataSources": [{
+      "apiKey": "getCorpIntroduce",
+      "propName": "getCorpIntroduce"
+    }]
+  },
+  "dataSources": [
+    {
+      "apiKey": "getCorpIntroduce",
+      "propName": "getCorpIntroduce"
+    }
+  ]
+}

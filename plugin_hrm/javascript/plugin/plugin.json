@@ -1,0 +1,7 @@
+{
+    "publicComponents": {
+      "isv-component": "components/isv-component/index"
+    },
+    "main": "index.js"
+  }
+  

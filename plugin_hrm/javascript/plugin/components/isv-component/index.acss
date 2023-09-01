@@ -1,0 +1,5 @@
+/* 设置宽高 */
+.container {
+  width: 100%;
+  height: 500rpx;
+}
