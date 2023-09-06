@@ -1,0 +1,6 @@
+{
+    "defaultTitle": "标准化组件开发DEMO",
+    "usingComponents": {
+      "isv-component": "plugin://isv-component/chart"
+    }
+  }
